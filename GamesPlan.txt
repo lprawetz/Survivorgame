@@ -1,0 +1,114 @@
+Idee: 
+-Setting: Fantasy
+-Survivor Game
+
+-------------- Design --------------
+-Sandboxwelt
+Perspective: Vampire Survivors
+-Biome:
+Berge, Wüste, Wald, Eisgegend, Vulkan, Drachenfriedhof, Gefängnisse der Helden
+
+-Farben im Zelda BOTW Style
+
+-Über Zeit schwerere Gegner und mehr davon
+
+-Gegner droppen Erfarhung und Gold:
+Gold = Kann bei random Händlern ausgegeben werden, für Gegenstände.
+->Es gibt Sets, wenn vollständig verändern sie die Subclass mit neuen Fähigkeiten
+
+-Spieler wählt am Anfang der Runde Element und damit Character aus.
+Im Spielverlauf kann er ein weiteres Element wählen.
+-> Er erhält damit zugang zu diesem ElementenSkillbaum und zusätzlich ergeben sich aus der Kombination Synergiefähigkeiten, die 
+
+-Endboss besiegen, droppt Legendäre Set Gegenstände, die Fähigkeiten grundlegend verändern.
+
+Charactere(The hole picture size has to be 84 by 84 Pixels):
+Main Character: Princess Esmeralda
+Elemente als Thema
+-Feuer -> Magier
+->Aussehen: Woman with light Skincolor, black neck long hair. She should wear a leather tunic in color #70A09D and light brown leather pants. 
+She holds a red ball of light with both hands in front of herself. 
+
+-Erde -> Tank/Magier/Supporter
+->Aussehen: Big Man with light brown Skincolor and bald Head. 
+The upper Torso and shoulders look like stone. He has brown long pants on. 
+The Background is white. Pixel Art with a Canvas of 84 by 84 Pixels. Full body is visible. 
+He is positioned walking to the left side.
+
+-Wasser -> Healer/Magier
+->
+-Wind -> Ranger/Assassin/Duellant/Magier/MartialArt/Support
+-Tod -> Nekro/Magier
+
+Attribute:
+Intelligenz
+-Magieschaden
+Stärke
+-Angriffschaden
+(-Crit Schaden)
+Beweglichkeit
+-Bewegungsgeschwindigkeit
+-Crit Chance
+(-Crit Schaden)
+Konstitution
+-Max Life
+-Life Regen
+-Widerstände
+[Willenskraft](Bei Aktivfähigkeiten)
+
+----- Übergeordneter Perktree -------
+
+Chance, dass der Ch
+
+
+
+
+--------------Storyark---------------
+Esmeralda versucht Elemente zu vereinen, Jedes Element ist ein "menschlicher" Character, der/die Interessen hat->Konfikte zwischen Elementen
+Esmeralda muss die Konflikte auflösen, um die Elemente zu vereinen. [Nebenquests] -> Questpool für jeden Charakter (für wiederspielwert)
+
+Altes Gamedesign umdrehen: Helden wurde entführt, Prinzessin ist erster Charakter und muss die Helden befreien.
+Jeder Held ist nach Befreihung spielbar.
+Helden gefangen in Locations, die als ganzes Spawnen können.
+Spieler muss rätzel lösen und gegner besiegen, um sie zu befreien.
+
+Wenn Helden (nicht Prinzessin) "sterben" können Sie vom Bösen wieder gefangen werden
+-> Dann müssen sie wieder befreit werden, bevor sie wieder gespielt werden können.
+[Boolean Feld auf playerChar: 'imprisoned']
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+Todos:
+World:
+1. Tilesets
+2. Grundlegender Algorythmus für Weltgeneration
+3. Spezifizieren zu welchen Bedingungen Biome und Locations auftauchen 
+
+Character:
+1. Character skizzieren
+2. Fähigkeiten überlegen
+3. Sprites
+-> 48x48px
+4. Animationen
+
+Gegner:
+1. Gegner skizzieren
+2. Fähigkeiten überlegen
+3. Sprites
+4. Animationen
+
+_____________DLC Ideen_____________
+-Spieler kann einen Builder Charakter befreien, mit dem er eine Basis bauen kann.
+-Aktive Fähigkeiten auf den Maustasten
+
+___________________________________
+
+TODOS:
+1. Charaktere entwerfen +
+2. Sprites
+3. Weltdesigns 
+-> Ob 2D oder Isometisch SPÄTER ENTSCHEIDEN!!
+4. Basemovement checken + Animation
+5. Story ausschreiben
+
