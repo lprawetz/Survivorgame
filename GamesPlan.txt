@@ -64,17 +64,37 @@ Chance, dass der Ch
 
 
 --------------Storyark---------------
-Esmeralda versucht Elemente zu vereinen, Jedes Element ist ein "menschlicher" Character, der/die Interessen hat->Konfikte zwischen Elementen
-Esmeralda muss die Konflikte auflösen, um die Elemente zu vereinen. [Nebenquests] -> Questpool für jeden Charakter (für wiederspielwert)
+Rahmenstory:
+"Universum stirbt (FRAGE ZU KLÄREN: WARUM). Fortschrifliche Alienrasse baut Obelisken als eine Art Arche, 
+Sie Testen Verschiedene Geschöpfe, um zu entscheiden. wenn sie Retten sollen.
 
-Altes Gamedesign umdrehen: Helden wurde entführt, Prinzessin ist erster Charakter und muss die Helden befreien.
-Jeder Held ist nach Befreihung spielbar.
-Helden gefangen in Locations, die als ganzes Spawnen können.
+Obelisk fällt auf die Erde, Hauptcharacter fast ihn an und wird gegen seinen Widerstand hineingezogen.
+Obelisk ist wie ein Portal: Hauptcharacter wird in einer neuen Welt herausgelassen und nach und nach von Gegnern angegriffen.
+Beim Tod landet er wieder im Obelisk und wird WIEDER in einer neuen Welt herausgelassen. Im Obelisk s gibt es eine Bases.
+Spieler hat 10 Versuche bestimmte Aufgaben zu schaffen. Die sollen so schwer sein, dass man sie nur schwer schaffen kann und einige Versuche braucht.
+Am Ende verbraucht der Spieler entweder alle Versuche oder die Aufgaben erfolgreich erfüllt bekommt er (im zweiten Fall zu unrecht) die Meldung er hätte es nicht geschafft.
+Ein mysteriöser Fremder interveniert und hilft die Verknüpfung mit dem Obelisken aufrecht zu erhalten um den Spieler zu retten.
+Allerdings ist der Zugang zum Obelisken nun weg, und der Spieler muss Schlüsselgegenstände finde um wieder Zugriff zu bekommen.
+
+
+Prinzessin ist erster Charakter und findet andere Charactere.
+Charactere gefangen in Locations, die als ganzes Spawnen können.
 Spieler muss rätzel lösen und gegner besiegen, um sie zu befreien.
 
-Wenn Helden (nicht Prinzessin) "sterben" können Sie vom Bösen wieder gefangen werden
--> Dann müssen sie wieder befreit werden, bevor sie wieder gespielt werden können.
-[Boolean Feld auf playerChar: 'imprisoned']
+Schlüsselgegenstände:
+Hauptcharacter findet Schlüsselgegenstände, die die Story und das Spiel ansich erweitern. 
+Z.B. Gegenstand um den Obelisken zu öffnen, darin gibts einen einfachen Basisbau (NOCH ZU DEFINIEREN), wo der/die Charactere geupgradet werden können.
+-> Schmiede, Verzauberung, Alchemie...
+
+Hauptcharacter findet andere Charactere, die sich Ihm anschließen und spielbar werden und in der Basis Funktionen eröffnen. (Schmied, Zauberin, Hexe, usw)
+Die anderen Charactere sind ebenfalls an den Obelisken gebunden worden.
+-> Eigene Skillsets, Waffen, usw.
+
+    Wenn Spieler mit einem der Charactere (nicht Prinzessin) spielt und KO geht, gibt es eine Chance, 
+    dass überleben und vom Bösen gefangen werden oder sterben und vom Obelisken zurückgeholt werden. (Chance Ereigniss)
+    -> Dann müssen sie wieder befreit werden, bevor sie wieder gespielt werden können.
+    [Boolean Feld auf playerChar: 'imprisoned']
+
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////
