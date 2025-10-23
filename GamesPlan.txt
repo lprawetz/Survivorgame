@@ -2,45 +2,67 @@ Idee:
 -Setting: Fantasy
 -Survivor Game
 
+Bedienlemente:
+Startbildschirm hat Buttons für:
+1. "Spielen" - Springt in eine Charakterauswahl, von der aus man dann ein neues Spiel starten kann.
+2. "Fortschritt" - Zeigt eine Übersicht der freigeschalteten Ausrüstungsset-Teile in Kachelform an.
+3. "Optionen" - Spieleinstellungen, wie Bild, Ton und Steuerung. (erstmal nur Tastatur. Später soll Controllerunterstützung gegeben sein)
+4. "Beenden" - Beendet das Spiel und schließt das Fenster.
+
+Charakterauswahl Bildschirm:
+enthält Kacheln in die später die Anzeigebilder der Charaktere eingefügt werden können.
+Es soll immer eine Charakterkachel auswählbar sein.
+Am rechten Rand soll Ein Fenster sein, dass später Informationen über den ausgewählten Charakter anzeigt, wie zum Beispielt Name und Attribute.
+Darunter soll der Button "Start" sein. Darüber ein Button "Zurück", mit dem man zurück ins Hauptmenü kommt.
+
 -------------- Design --------------
 -Sandboxwelt
-Perspective: Vampire Survivors
+Perspektive in 2D wie bei Vampire Survivors
 -Biome:
-Berge, Wüste, Wald, Eisgegend, Vulkan, Drachenfriedhof, Gefängnisse der Helden
+Wiese, Berge, Wüste, Wald, Eisgegend, Vulkan, Drachenfriedhof, Gefängnisse der Helden
 
--Farben im Zelda BOTW Style
+Die Spielwelt soll prozedural aus der TileMap erzeugt werden.
 
--Über Zeit schwerere Gegner und mehr davon
+-Farbpalette angelehnt an Zelda: Breath of the Wild.
+-Grafikstil: Pixelart.
+-Über Zeit schwerere Gegner und mehr davon spawnen.
 
 -Gegner droppen Erfarhung und Gold:
-Gold = Kann bei random Händlern ausgegeben werden, für Gegenstände.
-->Es gibt Sets, wenn vollständig verändern sie die Subclass mit neuen Fähigkeiten
+Gold = Kann bei random auftauchenden Händlern für Gegenstände ausgegeben werden.
+->Es gibt Ausrüstungssets. Wenn vollständig, verändert sich der Charakter und erhält ein Set an neuen, stärkeren Fähigkeiten. 
+(Die ausgestaltung aller Fähigkeiten und Fähigkeitsbäume wird erst noch gemacht)
 
--Spieler wählt am Anfang der Runde Element und damit Character aus.
-Im Spielverlauf kann er ein weiteres Element wählen.
--> Er erhält damit zugang zu diesem ElementenSkillbaum und zusätzlich ergeben sich aus der Kombination Synergiefähigkeiten, die 
+-Spieler wählt am Anfang einer Runde Runde Element und damit Character aus und klickt dann auf einen Button "Starten", um auf der Weltkarte zu spawnen.
+Im Spielverlauf kann er, durch aufsammeln von Erfahrungspunkten (Blaue Kugeln) einen Erfahrungsbalken am unteren Bildschirmrand füllen und aufleveln, wenn der Balken voll ist.
+Beim Level-up bekommt er 3 zufällige Fähigkeiten aus dem Fähigkeitenbaum des ausgewählten Charakters zu Auswahl gestellt. 
+(Angezeigt als Karten mit Icon der Fähigkeit oben und Informationen zur Fähigkeit unten)
 
--Endboss besiegen, droppt Legendäre Set Gegenstände, die Fähigkeiten grundlegend verändern.
+[Erweiterung für Später:
+Ab einem bestimmten Level kann der Spieler den Fähigkeitsbaum anderen Charakters zusätzlich auswählen
+-> Er erhält damit Zugang zu diesem Elementen-Skillbaum und es ergeben sich aus der Kombination der Fähigkeitsbäume Synergiefähigkeiten.
+]
 
-Charactere(The hole picture size has to be 84 by 84 Pixels):
-Main Character: Princess Esmeralda
-Elemente als Thema
+-Endboss spawnt nach 30 Minuten Spielzeit, wenn er besiegt wird, droppt er einzelene Teile der Ausrüstungssets.
+
+Charaktere(Sprites der Charaktere sollen die Maße 84 by 84 Pixels haben):
+Main Charakter: Princessin Esmeralda
+Elemente als Thema:
 -Feuer -> Magier
 ->Aussehen: Woman with light Skincolor, black neck long hair. She should wear a leather tunic in color #70A09D and light brown leather pants. 
 She holds a red ball of light with both hands in front of herself. 
 
+Weitere noch zu erstellende Charaktere basieren auf folgenden "Elementen":
 -Erde -> Tank/Magier/Supporter
 ->Aussehen: Big Man with light brown Skincolor and bald Head. 
 The upper Torso and shoulders look like stone. He has brown long pants on. 
 The Background is white. Pixel Art with a Canvas of 84 by 84 Pixels. Full body is visible. 
 He is positioned walking to the left side.
-
 -Wasser -> Healer/Magier
-->
 -Wind -> Ranger/Assassin/Duellant/Magier/MartialArt/Support
 -Tod -> Nekro/Magier
 
-Attribute:
+
+Charaktere sollen folgende Attribute in verschiedener, festgeschriebener Höhe erhalten, wenn die Runde startet:
 Intelligenz
 -Magieschaden
 Stärke
@@ -55,12 +77,6 @@ Konstitution
 -Life Regen
 -Widerstände
 [Willenskraft](Bei Aktivfähigkeiten)
-
------ Übergeordneter Perktree -------
-
-Chance, dass der Ch
-
-
 
 
 --------------Storyark---------------
@@ -99,36 +115,10 @@ Die anderen Charactere sind ebenfalls an den Obelisken gebunden worden.
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 
-Todos:
-World:
-1. Tilesets
-2. Grundlegender Algorythmus für Weltgeneration
-3. Spezifizieren zu welchen Bedingungen Biome und Locations auftauchen 
-
-Character:
-1. Character skizzieren
-2. Fähigkeiten überlegen
-3. Sprites
--> 48x48px
-4. Animationen
-
-Gegner:
-1. Gegner skizzieren
-2. Fähigkeiten überlegen
-3. Sprites
-4. Animationen
+Nächster TODO:
+-Für hauptcharakter Attribut Sheet entwerfen
+-TileMap schneiden und weitere Tiles für die Biome Wald und Berge erzeugen (begehbare Tiles)
 
 _____________DLC Ideen_____________
 -Spieler kann einen Builder Charakter befreien, mit dem er eine Basis bauen kann.
 -Aktive Fähigkeiten auf den Maustasten
-
-___________________________________
-
-TODOS:
-1. Charaktere entwerfen +
-2. Sprites
-3. Weltdesigns 
--> Ob 2D oder Isometisch SPÄTER ENTSCHEIDEN!!
-4. Basemovement checken + Animation
-5. Story ausschreiben
-
