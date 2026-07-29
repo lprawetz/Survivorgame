@@ -26,40 +26,53 @@ namespace SurvivorGame.UI.Menus
         
         private void LoadSettings()
         {
-            // Load settings from config file
-            if (FileAccess.FileExists("user://settings.cfg"))
+            var cfg = new ConfigFile();
+            if (cfg.Load("user://settings.cfg") == Error.Ok)
             {
-                using var file = FileAccess.Open("user://settings.cfg", FileAccess.ModeFlags.Read);
-                _masterVolumeSlider.Value = float.Parse(file.GetLine());
-                _musicVolumeSlider.Value = float.Parse(file.GetLine());
-                _sfxVolumeSlider.Value = float.Parse(file.GetLine());
+                _masterVolumeSlider.Value = (double)cfg.GetValue("audio", "master", 1.0);
+                _musicVolumeSlider.Value  = (double)cfg.GetValue("audio", "music",  1.0);
+                _sfxVolumeSlider.Value    = (double)cfg.GetValue("audio", "sfx",    1.0);
             }
+            // Werte sofort auf AudioServer anwenden
+            ApplyVolume("Master", _masterVolumeSlider.Value);
+            ApplyVolume("Music",  _musicVolumeSlider.Value);
+            ApplyVolume("SFX",    _sfxVolumeSlider.Value);
         }
-        
+
         private void SaveSettings()
         {
-            using var file = FileAccess.Open("user://settings.cfg", FileAccess.ModeFlags.Write);
-            file.StoreLine(_masterVolumeSlider.Value.ToString());
-            file.StoreLine(_musicVolumeSlider.Value.ToString());
-            file.StoreLine(_sfxVolumeSlider.Value.ToString());
+            var cfg = new ConfigFile();
+            cfg.SetValue("audio", "master", _masterVolumeSlider.Value);
+            cfg.SetValue("audio", "music",  _musicVolumeSlider.Value);
+            cfg.SetValue("audio", "sfx",    _sfxVolumeSlider.Value);
+            cfg.Save("user://settings.cfg");
         }
         
         private void OnMasterVolumeChanged(double value)
         {
-            // TODO: Implement master volume control
+            ApplyVolume("Master", value);
             SaveSettings();
         }
-        
+
         private void OnMusicVolumeChanged(double value)
         {
-            // TODO: Implement music volume control
+            ApplyVolume("Music", value);
             SaveSettings();
         }
-        
+
         private void OnSFXVolumeChanged(double value)
         {
-            // TODO: Implement SFX volume control
+            ApplyVolume("SFX", value);
             SaveSettings();
+        }
+
+        private static void ApplyVolume(string busName, double linearValue)
+        {
+            int idx = AudioServer.GetBusIndex(busName);
+            if (idx < 0) return;
+            // Lautstärke 0.0–1.0 → Dezibel; Stille bei 0 = -80 dB
+            float db = linearValue <= 0.0001 ? -80f : Mathf.LinearToDb((float)linearValue);
+            AudioServer.SetBusVolumeDb(idx, db);
         }
         
         private void OnBackPressed()

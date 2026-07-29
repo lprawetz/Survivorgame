@@ -1,0 +1,20 @@
+[gd_scene format=3]
+
+; Minimale Spielwelt-Szene.
+; Füge im Godot-Editor folgende Nodes hinzu:
+;   - MapGenerator  (TileMap, Skript: Scripts/MapGenerator.cs, TileSet konfigurieren)
+;   - Player        (CharacterBody2D, Skript: Scripts/PlayerMovement.cs)
+;       |- Sprite2D
+;       |- CollisionShape2D  (CapsuleShape2D empfohlen)
+;       |- HurtBox           (Area2D, Skript: Scripts/Combat/HurtBox.cs)
+;           |- CollisionShape2D
+;   - Camera2D      (Position Tracking: auf Player setzen)
+;   - EnemySpawner  (Node, Skript: Scripts/Combat/EnemySpawner.cs)
+;   - ExperienceSystem (Node, Skript: Scripts/Combat/ExperienceSystem.cs)
+;   - LevelUpSystem    (Node, Skript: Scripts/Combat/LevelUpSystem.cs)
+;
+; Signal-Verbindungen (im Editor herstellen):
+;   EnemySpawner.DropCollected  -> ExperienceSystem.OnDropCollected
+;   ExperienceSystem.LevelUp    -> LevelUpSystem.OnPlayerLevelUp
+
+[node name="GameWorld" type="Node2D"]

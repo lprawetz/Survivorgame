@@ -7,6 +7,46 @@ Survivor-Game – Strukturierter Gameplan
 - Ziel: Ein prozedural generiertes Sandbox-World-Exploration-Spiel mit starken Biomen, Gegnern, Loot, Skill-Progression und Story-Elementen.
 - Stilrichtung: Pixelart, atmosphärisch, klar lesbare Tile-Umgebungen, starke biome Basierte Vielfalt.
 
+1.1 Visuelles Vorbild – Zelda: Breath of the Wild (Farbpalette & Stil)
+- BotW nutzt einen Cel-Shading-Stil, inspiriert von Gouache-Malerei und japanischem Anime.
+- Die Farbgebung ist biom-spezifisch und stark kontrastreich:
+
+  Kernwelt / Hyrule Field:
+  - Sattes Grasgrün (#4A7C3F, #6BA358) für Wiesen und Wälder
+  - Helles Himmelblau (#87CEEB, #A2BDEE) für den Tageshimmel
+  - Warmes Beige / Erdbraun (#C4A882, #8B6914) für Wege und Fels
+  - Klares Wasserblau / Türkis (#3DA5C0, #76AFE3) für Seen und Flüsse
+
+  Wüste (Gerudo):
+  - Warmes Sandgelb (#E8C87A, #D4A853)
+  - Tiefes Terrakotta-Orange (#C1622B) für Felswände
+  - Helles Cremeweiß (#F5E6C8) für Sandflächen
+
+  Vulkan / Death Mountain:
+  - Tiefes Basaltgrau (#3D3D3D, #242424) für Fels und Asche
+  - Glühendes Lava-Orange (#FF6820) und Dunkelrot (#8B1A00)
+  - Schwelender Schwefelgelb (#D4C428) für Dunst
+
+  Eis / Lanayru:
+  - Reines Eisweiß (#F0F4FF, #DDEEFF)
+  - Kaltes Hellblau (#A8C8E8, #6CA0C8) für Schnee und Eis
+  - Dunkles Graublau (#4A6080) für Felsen unter Eis
+
+  Sheikah-Technologie (Obelisken, Schreine):
+  - Leuchtendes Cyan (#00CFDF) für aktive Runen
+  - Tiefes Dunkelblau (#001489) für Hintergründe
+  - Schwaches Orange-Rot (#FF3A00) für korrumpierte / Calamity-Elemente
+
+  Calamity / Tod:
+  - Tintenschwarz (#1A1A2E) und tiefes Lila (#4A0080)
+  - Schmutziges Dunkelrot (#6B0000) für verderbte Flächen
+
+- Übertragung auf unser Spiel:
+  - Biome erhalten je eine Primär- und eine Akzentfarbe nach diesem Schema.
+  - Übergangsbereiche mischen die Farbpaletten der angrenzenden Biome.
+  - Sheikah/Obelisk-Elemente nutzen Cyan als Erkennungsfarbe.
+  - Morvanes Todeszone: Lila- und Schwarztöne dominieren.
+
 2. Spielprinzip
 - Startbildschirm mit:
   1. Spielen
@@ -191,3 +231,60 @@ Survivor-Game – Strukturierter Gameplan
 - Die Welt soll sich von einem lebendigen, gemischten Zentrum über klare Übergänge hin zu extremen Außenbiomen entwickeln.
 - Die Übergangsgebiete sind nicht nur dekorativ, sondern sollten die Welt glaubwürdig und spielerisch spannend machen.
 - Besonders wichtig sind die Übergänge zwischen Vulkan und Eisgebirge, weil sie ein starkes, visuell markantes und narrativ hohes Gebiet erzeugen können.
+
+13. Couch-Coop-Modus (4 Spieler)
+==================================
+
+13.1 Grundprinzip
+- Bis zu 4 Spieler lokal am selben Gerät (Couch-Coop).
+- Jeder Spieler wählt im Charakterauswahlmenü einen Charakter.
+- Alle Spieler befinden sich in derselben Spielwelt, keine Trennung.
+
+13.2 Kamera-Lösung: Dynamische Shared Camera mit Auto-Zoom
+- Eine gemeinsame Camera2D zentriert sich auf den Mittelpunkt aller aktiven Spieler.
+- Der Zoom passt sich automatisch an den maximalen Abstand zwischen den Spielern an:
+    - Alle nah beieinander: Zoom 1.0 (normal)
+    - Spieler entfernen sich: Zoom sinkt bis Minimum 0.4
+    - Unterschreitet ein Spieler den Mindest-Zoom-Abstand, greift das Gummiband.
+- Gummiband: Spieler > 600 Tiles vom Mittelpunkt → sanfter Sog zurück zur Gruppe.
+- Kameraübergänge sind geglättet (Lerp) um Ruckeln zu vermeiden.
+
+13.3 Spieler-Unterscheidung (visuell)
+- Jeder Spieler hat einen farbigen Leuchtkreis unter seiner Figur:
+    P1 = Rot    (#FF4444)
+    P2 = Blau   (#4488FF)
+    P3 = Grün   (#44CC44)
+    P4 = Gelb   (#FFDD00)
+- Kleines „P1/P2/P3/P4"-Label über dem Kopf des Charakters.
+- HP-Balken je Spieler in den 4 Ecken des Bildschirms (Farbe passend zum Spieler).
+- Gold und XP werden pro Spieler getrennt verfolgt, Level-Ups individuell.
+
+13.4 Tod & Wiederbelebung im Coop
+- Stirbt ein Spieler: Charakter wird transparent/geisterhaft und bleibt am Platz.
+- Wiederbelebung: Ein anderer Spieler hält 3 Sekunden neben dem Geist.
+- Narrativ passend zur Lore: Charaktere können von anderen „befreit" werden.
+- Hat ein Spieler noch Extraleben (aus der Ritual-Questreihe), wird stattdessen
+  ein Extraleben verbraucht (kein Ghost-State).
+- Nach dem Endboss oder beim Runden-Ende werden alle toten Spieler wiederbelebt.
+
+13.5 Steuerung
+- Unterstützt werden: Keyboard (bis 2 Spieler) und Gamepads (bis 4 Spieler).
+- Spieler 1: WASD + Aktiv-Taste: Leertaste
+- Spieler 2: Pfeiltasten + Aktiv-Taste: Enter
+- Spieler 3+4: Gamepad (D-Pad/Stick + Südtaste für Aktivfähigkeit)
+- Input wird über PlayerInputManager verwaltet, der Geräte dynamisch zuordnet.
+
+13.6 Gameplay-Anpassungen im Coop
+- Gegner-HP skaliert mit Spieleranzahl: +40% HP pro zusätzlichem Spieler.
+- Gegner-Spawnrate erhöht sich leicht (mehr Ziele = mehr Action).
+- Gold-Drops sind geteilt: jeder Spieler erhält den vollen Betrag (kein Teilen).
+- XP-Drops sind geteilt: alle Spieler leveln gleichzeitig (selbe XP-Kurve).
+- Level-Up-Auswahl: Jeder Spieler wählt separat – Spiel pausiert reihum für jeden.
+
+13.7 Technische Umsetzung (Godot)
+- CoopCamera.cs: Camera2D, die alle Spielerpositionen überwacht und Zoom/Position
+  automatisch anpasst.
+- PlayerInputManager.cs: Autoload, der Eingabegeräte (Keyboard/Gamepad) den
+  Spieler-Slots P1–P4 zuordnet und Input-Actions spielerspezifisch weiterleitet.
+- Player.tscn wird 1–4x instanziiert, jede Instanz bekommt eine PlayerIndex-Zahl.
+

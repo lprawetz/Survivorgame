@@ -32,32 +32,108 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -400.0
-offset_top = -200.0
-offset_right = -50.0
-offset_bottom = 150.0
+offset_left = -420.0
+offset_top = -220.0
+offset_right = -30.0
+offset_bottom = 220.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="CharacterName" type="Label" parent="InfoPanel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="InfoPanel"]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 15
 anchor_right = 1.0
-offset_left = 20.0
-offset_top = 20.0
-offset_right = -20.0
-offset_bottom = 46.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 24
-text = "Character Name"
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="CharacterName" type="Label" parent="InfoPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Name"
 horizontal_alignment = 1
 
-[node name="CharacterDescription" type="Label" parent="InfoPanel"]
+[node name="CharacterRole" type="Label" parent="InfoPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Rolle"
+horizontal_alignment = 1
+
+[node name="CharacterElement" type="Label" parent="InfoPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Element"
+horizontal_alignment = 1
+
+[node name="CharacterDescription" type="Label" parent="InfoPanel/VBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 80)
+theme_override_font_sizes/font_size = 12
+text = "Beschreibung"
+horizontal_alignment = 0
+autowrap_mode = 2
+
+[node name="StatsGrid" type="GridContainer" parent="InfoPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+columns = 2
+
+[node name="StartButton" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = 20.0
-offset_top = 60.0
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -60.0
+offset_right = 250.0
+offset_bottom = -20.0
+grow_vertical = 0
+disabled = true
+text = "Bestätigen"
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 270.0
+offset_top = -60.0
+offset_right = 450.0
+offset_bottom = -20.0
+grow_vertical = 0
+text = "Zurück"
+
+[node name="PlayerHint" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 20.0
+offset_right = 300.0
+offset_bottom = 50.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 18
+text = "Spieler 1 wählt einen Charakter ..."
+horizontal_alignment = 1
+
+[node name="SelectionBar" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 480.0
+offset_top = -70.0
+offset_right = 980.0
+offset_bottom = -10.0
+grow_vertical = 0
+theme_override_constants/separation = 10
+
 offset_right = -20.0
 offset_bottom = 200.0
 grow_horizontal = 2

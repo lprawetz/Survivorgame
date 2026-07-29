@@ -1,0 +1,289 @@
+Bild-KI Prompts – Survivorgame Visuals
+=======================================
+
+EMPFOHLENE KI-TOOLS
+===================
+
+1. Leonardo.ai  (https://leonardo.ai)
+   - Kostenlose Version: 150 Credits/Tag
+   - Stärken: Pixelart-Modell "Pixel Art" oder "RPG 4.0", sehr konsistent
+   - Empfohlen für: Charaktere, Gegner, Items
+   - Tipp: Modell "Leonardo Pixel Art" wählen, "Alchemy V2" aktivieren
+
+2. Adobe Firefly  (https://firefly.adobe.com)
+   - Kostenlose Version: 25 Credits/Monat (mit Adobe-Konto)
+   - Stärken: Sehr sauber, konsistente Stile, gute Farbkontrolle
+   - Empfohlen für: Tile-Sets, Biom-Hintergründe, UI-Elemente
+   - Tipp: Style Reference Upload nutzen, um BotW-Farbstil beizubehalten
+
+3. Bing Image Creator / DALL-E 3  (https://www.bing.com/images/create)
+   - Kostenlos mit Microsoft-Konto (ca. 15 Boosts/Tag, danach langsamer)
+   - Stärken: Sehr detaillierte Charaktere, versteht komplexe Beschreibungen
+   - Empfohlen für: Charakterportraits, Story-Illustrationen
+
+4. Stable Diffusion (lokal)  (https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+   - Komplett kostenlos (läuft auf eigenem PC, benötigt GPU)
+   - Stärken: Unbegrenzte Generierungen, Modelle wie "RPG Pixel" von CivitAI
+   - Empfohlen für: Große Mengen Tiles, Animationen, Tilesets
+   - Modell-Empfehlung: "PixelartMix" oder "Dreamshaper" auf CivitAI.com
+
+5. Midjourney  (https://www.midjourney.com)
+   - Keine echte Freeversion mehr – aber 3 Tage Trial über Discord möglich
+   - Stärken: Hochwertigstes Pixelart-Ergebnis, beste Konsistenz
+   - Empfohlen für: Finale Portraits und Key-Art wenn Budget vorhanden
+
+------------------------------------------------------------
+GLOBALER STIL-SUFFIX (an jeden Prompt anhängen)
+------------------------------------------------------------
+
+Für Charaktere:
+"pixel art, top-down 2D RPG, 64x64 sprite sheet, fantasy, dark atmospheric,
+cel-shaded, high contrast, transparent background, Zelda Breath of the Wild color palette"
+
+Für Tiles/Biome:
+"pixel art tileset, top-down 2D RPG, 16x16 tiles, seamless, fantasy,
+atmospheric lighting, Zelda Breath of the Wild art direction, gouache painting style"
+
+Für Portraits (Charakterauswahl):
+"pixel art portrait, 128x128, fantasy RPG character, detailed, atmospheric,
+dark fantasy, front-facing, no background or dark gradient background"
+
+------------------------------------------------------------
+CHARAKTER-SPRITES
+------------------------------------------------------------
+
+--- Esmeralda (Feuer-Magierin) ---
+
+Portrait:
+"pixel art portrait, 128x128, young princess with crimson-red hair and golden
+crown, wearing a torn royal gown in deep red and gold tones, fire magic glowing
+in her hands, intense amber eyes with a hint of sadness, dark ruins background
+with glowing embers, fantasy RPG, cel-shaded, atmospheric"
+
+Sprite (Bewegung):
+"pixel art sprite sheet, 64x64 per frame, 4 directional walking animation
+(down, up, left, right), 4 frames each, fire princess with crimson hair,
+red-gold dress with flame effects, fantasy top-down RPG, transparent background"
+
+Angriffsanimation:
+"pixel art sprite sheet, 64x64, fire mage princess casting spell, arm raised,
+bright orange-red flame burst effect, 6 frame animation, top-down view,
+transparent background"
+
+Idle-Animation:
+"pixel art, 64x64, fire princess standing idle, subtle flame glow around hands,
+hair flowing slightly, 4 frame loop, top-down RPG sprite, transparent background"
+
+
+--- Rusk (Erde-Wächter) ---
+
+Portrait:
+"pixel art portrait, 128x128, massive stone golem warrior, ancient basalt rock
+body with glowing cracks of amber magma, worn stone mask with hollow eyes,
+slow dignified posture, dark underground cave background, deep earthy tones
+brown-gray-black, fantasy RPG, cel-shaded"
+
+Sprite (Bewegung):
+"pixel art sprite sheet, 64x64 per frame, 4 directional walking animation,
+giant stone golem, heavy slow movement, earthen brown and gray tones,
+small rocks floating around body, fantasy top-down RPG, transparent background"
+
+Angriffsanimation:
+"pixel art sprite sheet, 64x64, earth golem slamming ground, stone pillar
+rising from ground, 6 frame animation, dust and rock particles, top-down view"
+
+
+--- Thalira (Wasser-Heilerin) ---
+
+Portrait:
+"pixel art portrait, 128x128, ethereal water nymph with flowing silver-blue
+hair that blends into water, pale translucent skin with a faint blue glow,
+wearing flowing blue-gray robes, melancholic expression, surrounded by gentle
+water ripples and floating lily pads, soft teal lighting, fantasy RPG"
+
+Sprite (Bewegung):
+"pixel art sprite sheet, 64x64 per frame, 4 directional walking animation,
+water priestess in flowing blue robes, ripple effect around feet, translucent
+shimmer, soft blue-silver color palette, fantasy top-down RPG, transparent background"
+
+Heilanimation:
+"pixel art sprite sheet, 64x64, water mage healing spell cast, gentle blue-green
+light wave emanating from hands, water droplets floating upward, 6 frame animation"
+
+
+--- Vehyr (Wind-Assassine) ---
+
+Portrait:
+"pixel art portrait, 128x128, swift windrunner with wild windswept hair in
+silver-white and light gray, half-masked face, tattered cloak made of wind and
+shadow, piercing bright eyes, crouched ready-to-strike pose, high mountain
+cliff background with storm clouds, sharp contrasts, light and dark gray tones"
+
+Sprite (Bewegung):
+"pixel art sprite sheet, 64x64 per frame, 4 directional walking animation,
+agile assassin with flowing gray cloak, wind trail effect, fast fluid movement,
+light gray-white-dark blue color palette, fantasy top-down RPG, transparent background"
+
+Dash-Animation:
+"pixel art sprite sheet, 64x64, wind assassin dashing with wind burst trail,
+blur motion effect, 5 frame animation, top-down view, transparent background"
+
+
+--- Morvane (Tod-Totensprecher) ---
+
+Portrait:
+"pixel art portrait, 128x128, ancient death whisperer in tattered dark robes
+of deep purple and black, pale gaunt face with hollow dark eyes and subtle
+purple glow, bone and metal jewelry, surrounded by floating dark shadows and
+ash particles, standing at edge of ancient graveyard at night, cold purple
+torch light, unsettling but not evil expression, fantasy RPG, cel-shaded"
+
+Sprite (Bewegung):
+"pixel art sprite sheet, 64x64 per frame, 4 directional walking animation,
+death mage in long dark robes, shadow tendrils trailing behind, deep purple
+and black color palette, faint skull motifs on robe, floating slightly above
+ground, fantasy top-down RPG, transparent background"
+
+Todesmagie-Animation:
+"pixel art sprite sheet, 64x64, necromancer raising hand, dark purple energy
+swirling, shadow hands reaching from below, 6 frame animation, top-down view"
+
+------------------------------------------------------------
+BIOM-TILESETS
+------------------------------------------------------------
+
+--- Wiese / Kernzone ---
+"pixel art tileset, 16x16 tiles, lush green meadow, short grass, wildflowers
+in yellow and purple, soft earthy path tiles, stone wall tiles, small pond
+edge tiles, top-down 2D RPG, Zelda Breath of the Wild color palette,
+saturated green #4A7C3F, warm sunlight, seamless"
+
+--- Wald ---
+"pixel art tileset, 16x16 tiles, dense forest floor, dark green moss,
+large tree base tiles, exposed roots, fallen leaves in orange-brown,
+mushroom patches, top-down RPG fantasy, atmospheric shadow, seamless"
+
+--- Berge ---
+"pixel art tileset, 16x16 tiles, rocky mountain terrain, gray basalt rock,
+cracked stone paths, sparse mountain grass, cliff edge tiles, small crystals
+embedded in rock, top-down 2D RPG, cool gray-blue tones, seamless"
+
+--- Sumpf ---
+"pixel art tileset, 16x16 tiles, dark murky swamp, muddy brown-green water,
+dead tree stumps, lily pads, bubbling mud, reeds and cattails, foggy dark
+atmosphere, top-down RPG, desaturated green-brown palette, seamless"
+
+--- Wüste ---
+"pixel art tileset, 16x16 tiles, sandy desert terrain, warm sand dunes,
+cracked dry earth, sandstone rock formations, scattered dry bones,
+ancient ruin fragments, top-down 2D RPG, warm gold-orange #E8C87A palette,
+harsh sunlight, seamless"
+
+--- Vulkan ---
+"pixel art tileset, 16x16 tiles, volcanic terrain, black basalt rock #3D3D3D,
+glowing lava cracks #FF6820, ash-covered ground, hardened lava flows,
+steam vent tiles, top-down 2D RPG, dark and fiery atmosphere, seamless"
+
+--- Eiswüste ---
+"pixel art tileset, 16x16 tiles, frozen tundra, snow-covered ground,
+ice sheet tiles, frost-covered rocks, frozen dead trees, blizzard particle
+tiles, top-down 2D RPG, cold white-blue #F0F4FF palette, seamless"
+
+--- Eisgebirge ---
+"pixel art tileset, 16x16 tiles, glacier mountain, deep blue-white ice walls,
+snow-dusted cliff faces, icicle formations hanging down, frozen waterfall tiles,
+top-down 2D RPG, cold blue #A8C8E8 and gray tones, seamless"
+
+--- Gefrorenes Wasser ---
+"pixel art tileset, 16x16 tiles, frozen lake and river, cracked ice surface
+with blue depth showing below, frost patterns on ice, air bubble trapped in
+ice, top-down 2D RPG, pale blue-white palette, seamless"
+
+--- Vulkan-Eis-Übergangszone ---
+"pixel art tileset, 16x16 tiles, surreal transition zone between volcano and
+glacier, half-frozen lava tiles, black ash covering snow, steam rising from
+hot springs under ice, scorched icy rock, dramatic contrasts of orange and
+white-blue, top-down 2D RPG, seamless"
+
+------------------------------------------------------------
+GEGNER-SPRITES
+------------------------------------------------------------
+
+--- Basis-Gegner: Wald-Kreatur ---
+"pixel art sprite sheet, 32x32 per frame, forest creature enemy, dark green
+shadowy wolf-like beast with glowing yellow eyes, 4 directional walking animation
+4 frames each, death animation 4 frames, top-down 2D RPG, transparent background"
+
+--- Basis-Gegner: Wüsten-Scorpion ---
+"pixel art sprite sheet, 32x32, giant desert scorpion, sandy brown armored
+shell, glowing red eyes, 4 directional walking animation, attack animation
+with stinger, top-down 2D RPG, transparent background"
+
+--- Basis-Gegner: Eis-Wraith ---
+"pixel art sprite sheet, 32x32, ghostly ice wraith, translucent pale blue
+floating specter, sharp ice crystal claws, slow gliding movement, 4 directions,
+top-down RPG, transparent background"
+
+--- Basis-Gegner: Vulkan-Imp ---
+"pixel art sprite sheet, 32x32, small volcanic demon, dark red-black body
+with glowing orange lava cracks on skin, horns, fast erratic movement,
+4 directional animation, top-down 2D RPG, transparent background"
+
+--- Endboss: Obelisk-Wächter ---
+"pixel art sprite sheet, 96x96, massive ancient stone guardian boss,
+tall monolithic body of black and dark blue with glowing cyan runes #00CFDF,
+multiple arms with Sheikah-style markings, imposing, 4 directional idle
+animation, attack charge animation, top-down 2D RPG, transparent background"
+
+------------------------------------------------------------
+UI-ELEMENTE
+------------------------------------------------------------
+
+--- HP-Balken ---
+"pixel art UI health bar, fantasy RPG style, deep red fill with dark border,
+heart icon on left, worn stone or dark metal frame, 200x20 pixel, flat"
+
+--- XP-Balken ---
+"pixel art UI experience bar, glowing amber-gold fill, dark border,
+star icon on left, 200x10 pixel, flat"
+
+--- Gold-Anzeige ---
+"pixel art UI coin icon, gold coin with simple symbol, 16x16, shiny,
+flat, fantasy RPG style"
+
+--- Charakter-Portrait-Rahmen ---
+"pixel art portrait frame, 132x132, ornate stone-and-metal border,
+fantasy RPG style, aged dark stone with golden corner accents,
+transparent center, flat"
+
+--- Hauptmenü-Hintergrund ---
+"pixel art landscape background, 1920x1080, wide view of a fantasy world
+from above, glowing ancient obelisk in center, dark storm clouds with cracks
+of light, surrounding diverse biomes visible (forest left, mountains right,
+desert and ice in distance), Zelda BotW inspired atmosphere, dramatic lighting,
+cinematic wide angle, dark fantasy tone with cyan obelisk glow"
+
+--- Level-Up-Auswahl-Panel ---
+"pixel art UI panel, 3 card slots side by side, dark stone-blue background,
+golden border trim, fantasy RPG skill selection screen, worn parchment texture
+inside cards, 400x200 pixel total, flat"
+
+------------------------------------------------------------
+SONDERORTE
+------------------------------------------------------------
+
+--- Grab der Helden (Eingang) ---
+"pixel art, top-down 2D tile, dungeon entrance to hero's tomb, ancient stone
+archway with glowing cyan runes, carved hero reliefs on walls, moss and ivy,
+torches with blue fire, dramatic shadow, atmospheric, 16x16 to 32x32 tiles"
+
+--- Obelisk-Basis (Innen) ---
+"pixel art interior background, 1920x1080 or tileset, interior of an ancient
+black stone obelisk used as sanctuary, walls covered in cyan glowing runes
+#00CFDF, floating platforms, old maps and relics on walls, mystical dark blue
+atmosphere, top-down 2D RPG"
+
+--- Drachenfriedhof ---
+"pixel art tileset, 16x16, dragon graveyard, massive dragon skull and bone
+tiles, scorched earth, remnant scale tiles, eerie green fog, dark gray and
+bone-white palette, top-down 2D RPG, seamless"

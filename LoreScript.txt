@@ -122,3 +122,281 @@ Die Nebencharaktere sollen nicht nur als spielbare Figuren, sondern als Teil ein
 - Sie werden zufällig generiert und bekommen entsprechende Namen und ein individuelles Verkaufsinventar zugeordnet.
 - Die verschiedenen Händlerkulturen bieten jeweils Teile ein Ausrüstungsset an. Aber immer zufällig, welche Teile angeboten werden.
     - Es kann auch Händler geben, die keine Setgegenstände anbieten/dabei haben.
+
+5. Rüstungssets – Kulturelle Ausrüstungen
+==========================================
+
+Alle Sets können von allen Charakteren getragen werden.
+Jedes Set besteht aus 4 Teilen: Kopf, Brust, Hände, Füße.
+Erst das vollständige Set (alle 4 Teile) schaltet die Aktive Fähigkeit frei.
+Einzelne Teile geben nur passive Kleinboni (z. B. +5 HP, +2% Resistenz).
+
+Spielmechanik:
+- Angriffe sind grundsätzlich automatisch.
+- Die Aktive Fähigkeit des vollständigen Sets wird manuell ausgelöst (Taste/Button).
+- Jede aktive Fähigkeit hat eine individuelle Abklingzeit (Cooldown).
+
+------------------------------------------------------------
+
+5.1 Set der Kharadschen Wacht  [Bergkultur – Rusk]
+---------------------------------------------------
+Herkunft: Felsenstadt Kharad, tief in den Vulkanbergen.
+Philosophie: Ausdauer, Pflicht und unbrechbarer Wille.
+
+Teile:
+  Kopf  – Maske des Wächters
+    - Material: Schwarzer Basalt, gehärtetes Lavaleder, Metallnieten aus Eisenerz
+    - Aussehen: Steinmaske mit tiefen Hohlaugen, Risse aus gelbem Magmaglühen
+    - Passivbonus: +15 max. HP
+
+  Brust – Panzer der Tiefe
+    - Material: Geschichtete Basaltplatten, mit Vulkaneisen verschweißt,
+      innen mit Aschelederfutter gepolstert
+    - Aussehen: Massiv, dunkelgrau, mit eingraviertem Bergrelief auf der Brust
+    - Passivbonus: +8% physische Resistenz
+
+  Hände – Fäuste aus Kharad
+    - Material: Schmiedeeisen, vulkangehärteter Stein, Lederriemen
+    - Aussehen: Schwere Eisenhandschuhe mit Steinrücken, erinnern an Felsfäuste
+    - Passivbonus: +10% Angriffsschaden
+
+  Füße – Schritte des Berggeists
+    - Material: Vulkanbasalt-Sohlen, dickes Berglederleder, Metallschienen
+    - Aussehen: Klobige, schwere Stiefel wie aus Fels geschlagen
+    - Passivbonus: -15% Rückstoß durch Gegner
+
+Set-Aktive-Fähigkeit: „Erdspalte"
+  - Beschreibung: Der Träger stampft mit voller Kraft auf den Boden.
+    Steinpfeiler schießen im Radius von 200 Tiles aus dem Boden und
+    schleudern alle Gegner im Bereich zurück. Pfeiler verbleiben 3 Sekunden
+    als Hindernis.
+  - Schaden: Mittlerer physischer Schaden (basiert auf Stärke-Attribut)
+  - Cooldown: 18 Sekunden
+  - Synergien: Besonders stark mit Rusk (Stärke/Konstitution), aber für alle nutzbar
+
+------------------------------------------------------------
+
+5.2 Set der Spiegelseen  [Wasserkultur – Thalira]
+-------------------------------------------------
+Herkunft: Stadt der Spiegelseen, erbaut über stillem Wasser.
+Philosophie: Erinnerung, Heilung und die Stille vor dem Sturm.
+
+Teile:
+  Kopf  – Schilfkrone der Priesterschaft
+    - Material: Geflochtenes Schilf, gebrannter Ton, eingearbeitete Flussperlmutt
+    - Aussehen: Leichte, offene Krone aus Schilf und Keramik, blass-blau bemalt
+    - Passivbonus: +0.8 HP/s Lebensregeneration
+
+  Brust – Robe des stillen Spiegels
+    - Material: Mehrlagige Seide in Blaugrau, verstärkt mit lacquiertem Holzgeflecht
+      und kleinen Tonembleme auf der Brust
+    - Aussehen: Fließendes Gewand, das wie Wasser in Bewegung wirkt
+    - Passivbonus: +12% Magieschadenreduktion
+
+  Hände – Webhandschuhe der Heilerin
+    - Material: Handgesponnener Wasserfaden, in Heilkräuterlösung getränkt,
+      mit kleinen Perlen am Handgelenk
+    - Aussehen: Halblange, semitransparente Handschuhe, leicht schimmernd
+    - Passivbonus: +10% Heilungseffekt (eigene Regen + Heilzauber)
+
+  Füße – Sandalen des fließenden Schritts
+    - Material: Weidenholz-Sohle, weiches Leder, wasserabweisend behandelt
+    - Aussehen: Leichte Sandale mit Schnürung bis zur Wade, blass-silbern
+    - Passivbonus: +5% Bewegungsgeschwindigkeit auf Wasser-/Sumpftiles
+
+Set-Aktive-Fähigkeit: „Heilende Flut"
+  - Beschreibung: Eine Welle ruhigen Wassers breitet sich in alle Richtungen aus.
+    Alle Gegner im Wirkbereich werden verlangsamt (50% für 4 Sekunden),
+    der Träger wird sofort um 30% seiner maximalen HP geheilt.
+  - Heilteil: 30% max. HP sofort
+  - Verlangsamungsradius: 300 Tiles
+  - Cooldown: 22 Sekunden
+  - Synergien: Besonders stark mit Thalira (Konstitution/Willenskraft)
+
+------------------------------------------------------------
+
+5.3 Set der offenen Winde  [Windkultur – Vehyr]
+-----------------------------------------------
+Herkunft: Hochebenen-Siedlung der Windläufer, nomadisch und frei.
+Philosophie: Freiheit, Schnelligkeit und das Recht auf Veränderung.
+
+Teile:
+  Kopf  – Windschleier des Wanderers
+    - Material: Hauchfeiner Wollschleier aus Hochgebirgs-Merinowolle,
+      winddurchlässig, mit kleinen Windkristallen bestickt
+    - Aussehen: Halbtransparenter Kopfschleier der das Gesicht teilweise verdeckt,
+      flattert permanent in imaginärem Wind
+    - Passivbonus: +8% Ausweichwahrscheinlichkeit
+
+  Brust – Mantel der Reisenden
+    - Material: Leichtes Leder, vielfach geflickt aus verschiedenen Kulturstoffen,
+      Windkristall-Amulett eingenäht, farbige Wappenflicken
+    - Aussehen: Loser Reisemantel, bunt-patchwork, der beim Laufen weht
+    - Passivbonus: +12% Bewegungsgeschwindigkeit
+
+  Hände – Gleithandschuhe
+    - Material: Enganliegendes Kletterleder, griffig, mit Metallösen für Seile
+    - Aussehen: Kurze, dunkle Lederhandschuhe mit Windkristall auf dem Rücken
+    - Passivbonus: +8% Angriffsgeschwindigkeit
+
+  Füße – Sturmschritte
+    - Material: Extrem leichtes Leder, Luftkissen-Sohle aus getrocknetem
+      Bergmoos, federleicht
+    - Aussehen: Enganliegende, knöchelhohe Schuhe, fast unsichtbar im Laufen
+    - Passivbonus: +10% Bewegungsgeschwindigkeit (stackt mit Brustbonus)
+
+Set-Aktive-Fähigkeit: „Windstoß"
+  - Beschreibung: Der Träger löst sich in einen Windwirbel auf und rast in
+    Bewegungsrichtung vorwärts. Alle Gegner auf dem Weg erleiden Schaden und
+    werden zur Seite geschleudert. Endet mit einem kleinen Windstoß-Explosion
+    am Zielort.
+  - Schaden: Leichter physischer Schaden (basiert auf Beweglichkeit)
+  - Reichweite: 400 Tiles in Bewegungsrichtung
+  - Cooldown: 10 Sekunden (kürzester Cooldown aller Sets)
+  - Synergien: Besonders stark mit Vehyr (Beweglichkeit/Ausdauer)
+
+------------------------------------------------------------
+
+5.4 Set der Asche-Stadt  [Todkultur – Morvane]
+----------------------------------------------
+Herkunft: Die Stadt der Asche, am Rand eines verfallenen Vulkans.
+Philosophie: Erinnerung ehren, den Tod achten, das Vergessen verhindern.
+
+Teile:
+  Kopf  – Kapuze der Namenlosen
+    - Material: Schwerer schwarzer Grabstoff, in Asche gebeizter Leinen,
+      Knochenornamente am Saum eingenäht
+    - Aussehen: Tiefsitzende schwarze Kapuze, Gesicht im Schatten,
+      kleine Knochen-Symbole am Rand
+    - Passivbonus: +10% Magieschaden
+
+  Brust – Leichentuch der Wächter
+    - Material: Dunkelgraues mehrlagiges Zeremonientuch, mit Leichenstein-Platten
+      verstärkt, Metallringe aus Grabmetall verbunden
+    - Aussehen: Schwingendes dunkles Gewand über Kettenpanzer aus Grabmetall
+    - Passivbonus: +6% Schaden auf alle Angriffe gegen verlangsame/geschwächte Ziele
+
+  Hände – Knochenknöchel
+    - Material: Handschuhe aus schwarzem Leder mit eingenähten Knochen über
+      den Knöcheln, Fingerbeere aus Grabmetall
+    - Aussehen: Dunkle Handschuhe mit sichtbaren Knochen als Zierat und Waffe
+    - Passivbonus: +5% Chance Gegner bei Treffer zu verlangsamen (3 Sekunden)
+
+  Füße – Aschenstiefel
+    - Material: Schwarzes Vulkanleder, Sohle aus Aschenstein, bleibt keine
+      Spuren – symbolisch für den lautlosen Gang des Todes
+    - Aussehen: Kniehohe dunkle Stiefel, an der Seite Totenkopf-Emblem
+    - Passivbonus: +20% Bewegungsgeschwindigkeit wenn HP < 30%
+
+Set-Aktive-Fähigkeit: „Totenruf"
+  - Beschreibung: Der Träger ruft 3 Schattengeister aus dem Jenseits.
+    Diese verfolgen automatisch die nächsten Gegner und greifen sie 12 Sekunden
+    lang an, bevor sie sich auflösen. Beim Auflösen jedes Geistes wird ein
+    kleiner Schaden-Puls ausgelöst.
+  - Geisterschaden: Basiert auf Intelligenz/Willenskraft des Trägers
+  - Anzahl Geister: 3 (skaliert nicht mit Level)
+  - Dauer: 12 Sekunden pro Geist
+  - Cooldown: 25 Sekunden
+  - Synergien: Besonders stark mit Morvane (Intelligenz/Willenskraft)
+
+------------------------------------------------------------
+
+5.5 Königliches Erbe  [Feuerkultur – Esmeraldas Königreich]
+------------------------------------------------------------
+Herkunft: Das verbrannte Königreich, das einst den Obelisken bewachte.
+Philosophie: Würde im Untergang, Stärke aus der Erinnerung an das Verlorene.
+
+Teile:
+  Kopf  – Krone der Asche
+    - Material: Verbranntes Königsgold, das Feuer überstanden hat,
+      eingeschmolzene Rubine in den Zacken, Mithrilgestell
+    - Aussehen: Geschwärzte Goldkrone mit glühend-roten Edelsteinen,
+      einzelne Zacken leicht verbogen – Zeichen des Untergangs
+    - Passivbonus: +10% Magieschaden
+
+  Brust – Brustpanzer des letzten Hauses
+    - Material: Verzauberter Seidenpanzer mit Mithrilplatten, Phönixfeder
+      eingearbeitet, in Königsrot und Gold gehalten
+    - Aussehen: Eleganter roter Brustpanzer mit Goldfiligran, Wappen des
+      alten Königshauses auf der Brust
+    - Passivbonus: +20 max. HP, +5% Feuerresistenz
+
+  Hände – Feuerhandschuhe des Erbes
+    - Material: Mithrilgeflecht, innen feuerfestes Phönixlederfutter,
+      Rubinagraffe am Handgelenk
+    - Aussehen: Eng anliegende goldene Kettenhandschuhe, bei Magieeinsatz
+      leuchten sie kurz rot
+    - Passivbonus: +15% Magieschaden
+
+  Füße – Emberschritte
+    - Material: Feuergehärtetes Leder, Mithrilsohle, Rubine als Ziersteine
+      an der Schnalle, hinterlässt beim Laufen kurze Glutspuren
+    - Aussehen: Goldbraune Stiefel mit roten Edelsteinen, hinterlassen beim
+      schnellen Laufen einen kurzen Feuerschweif
+    - Passivbonus: +8% Bewegungsgeschwindigkeit
+
+Set-Aktive-Fähigkeit: „Feuersturm"
+  - Beschreibung: Der Träger schlägt die Hände zusammen und entfacht einen
+    kreisförmigen Feuersturm um sich herum. Alle Gegner im Radius nehmen
+    kontinuierlichen Brandschaden über 6 Sekunden. Der Feuerring expandiert
+    langsam von Radius 150 auf 350 Tiles.
+  - Schaden: Schwerer Magieschaden pro Sekunde (basiert auf Intelligenz)
+  - Radius: 150 → 350 Tiles über 6 Sekunden
+  - Cooldown: 20 Sekunden
+  - Synergien: Besonders stark mit Esmeralda (Intelligenz/Willenskraft)
+
+------------------------------------------------------------
+
+5.6 Set des Wanderhändlers  [Händlerkultur – Überregional]
+----------------------------------------------------------
+Herkunft: Kein fester Ort – zusammengestückelt aus Tauschhandel aller Kulturen.
+Philosophie: Was nützt, wird behalten. Was nichts nützt, wird verkauft.
+
+Teile:
+  Kopf  – Händlerhut
+    - Material: Breitrandiger Filzhut aus gemischten Kulturstoffen,
+      Münzen und Amulette verschiedener Kulturen am Rand
+    - Aussehen: Abgenutzter breiter Hut mit bunten Anhängern aller Kulturen
+    - Passivbonus: +15% Goldbonus von Gegnerdrops
+
+  Brust – Flickenmantel des Reisenden
+    - Material: Mantel aus Lederflicken aller fünf Kulturen zusammengenäht,
+      verborgende Innentaschen, schwer einzuschätzen welcher Kultur er entstammt
+    - Aussehen: Bunter, abgenutzter Reisemantel mit unzähligen Taschen,
+      jeder Fleck erzählt von einem anderen Ort
+    - Passivbonus: +1 Slot für Tränke/Verbrauchsgegenstände
+
+  Hände – Tauschhandschuhe
+    - Material: Dünne Lederhandschuhe mit Metallösen, schnell an- und ausziehbar,
+      Münzprägung auf dem Handrücken
+    - Aussehen: Schlichte braune Handschuhe, leicht abgenutzt
+    - Passivbonus: Händlerpreise -10%
+
+  Füße – Fernstraßen-Stiefel
+    - Material: Robustes Reisestiefel-Leder, mit Fett behandelt, Doppelsohle
+      für lange Märsche, verschiedene Flicken an den Schäften
+    - Aussehen: Abgelaufene braune Stiefel, repariert und repariert
+    - Passivbonus: +5% Bewegungsgeschwindigkeit außerhalb von Kämpfen
+
+Set-Aktive-Fähigkeit: „Goldene Gelegenheit"
+  - Beschreibung: Der Träger aktiviert seinen Händlerinstinkt. Für 20 Sekunden
+    droppen alle Gegner doppeltes Gold. Außerdem erscheint im aktuellen Biom
+    sofort ein Zufalls-Händler (falls noch keiner sichtbar).
+  - Goldbonusdauer: 20 Sekunden
+  - Händler-Spawn: 1x pro Aktivierung, Händler bleibt 60 Sekunden
+  - Cooldown: 45 Sekunden (längster Cooldown – wirtschaftliche Stärke)
+  - Synergien: Universell nutzbar, keine Charakterpreferenz
+
+------------------------------------------------------------
+
+6. Übersichtstabelle der Sets
+==============================
+
+Set                     | Kultur      | Aktive Fähigkeit    | Cooldown | Stärke
+------------------------|-------------|---------------------|----------|--------
+Kharadschen Wacht       | Berg/Erde   | Erdspalte           | 18 Sek.  | Kontrolle + Schaden
+Set der Spiegelseen     | Wasser      | Heilende Flut       | 22 Sek.  | Überleben + Kontrolle
+Set der offenen Winde   | Wind        | Windstoß            | 10 Sek.  | Mobilität + Burst
+Set der Asche-Stadt     | Tod         | Totenruf            | 25 Sek.  | Dauerhafte Präsenz
+Königliches Erbe        | Feuer       | Feuersturm          | 20 Sek.  | Flächenschaden
+Set des Wanderhändlers  | Überregional| Goldene Gelegenheit | 45 Sek.  | Wirtschaft + Utility
