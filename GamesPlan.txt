@@ -1,124 +1,193 @@
-Idee: 
--Setting: Fantasy
--Survivor Game
+Survivor-Game – Strukturierter Gameplan
 
-Bedienlemente:
-Startbildschirm hat Buttons für:
-1. "Spielen" - Springt in eine Charakterauswahl, von der aus man dann ein neues Spiel starten kann.
-2. "Fortschritt" - Zeigt eine Übersicht der freigeschalteten Ausrüstungsset-Teile in Kachelform an.
-3. "Optionen" - Spieleinstellungen, wie Bild, Ton und Steuerung. (erstmal nur Tastatur. Später soll Controllerunterstützung gegeben sein)
-4. "Beenden" - Beendet das Spiel und schließt das Fenster.
+0. In Godot Engine erstellt mit C# als Grundsprache
 
-Charakterauswahl Bildschirm:
-enthält Kacheln in die später die Anzeigebilder der Charaktere eingefügt werden können.
-Es soll immer eine Charakterkachel auswählbar sein.
-Am rechten Rand soll Ein Fenster sein, dass später Informationen über den ausgewählten Charakter anzeigt, wie zum Beispielt Name und Attribute.
-Darunter soll der Button "Start" sein. Darüber ein Button "Zurück", mit dem man zurück ins Hauptmenü kommt.
+1. Projektidee
+- Setting: Fantasy-Survival-Action in 2D-Top-Down-Perspektive.
+- Ziel: Ein prozedural generiertes Sandbox-World-Exploration-Spiel mit starken Biomen, Gegnern, Loot, Skill-Progression und Story-Elementen.
+- Stilrichtung: Pixelart, atmosphärisch, klar lesbare Tile-Umgebungen, starke biome Basierte Vielfalt.
 
--------------- Design --------------
--Sandboxwelt
-Perspektive in 2D wie bei Vampire Survivors
--Biome:
-Wiese, Berge, Wüste, Wald, Eisgegend, Vulkan, Drachenfriedhof, Gefängnisse der Helden
+2. Spielprinzip
+- Startbildschirm mit:
+  1. Spielen
+  2. Fortschritt
+  3. Optionen
+  4. Beenden
+- Charakterauswahl:
+  - Kachelbasierte Auswahl von spielbaren Charakteren.
+  - Rechts ein Informationsfenster mit Name, Element, Attributen und Hintergrund.
+  - Button: Start / Zurück.
+- Gameplay-Loop:
+  - Spieler wählt ein Element/Charakter.
+  - Start einer Runde auf der Weltkarte.
+  - Gegner spawnen über Zeit, werden stärker und zahlreicher.
+  - Gegner droppen Erfahrung und Gold.
+  - Erfahrung füllt den Level-Up-Balken.
+  - Beim Level-Up erhält der Spieler 3 zufällige Fähigkeiten aus dem Skillbaum des Charakters zur Auswahl.
+  - Gold kann bei Händlern für Gegenstände ausgegeben werden.
+  - Ausrüstungssets können gesammelt werden und verändern den Charakter bei Vollständigkeit.
+  - Endboss spawnt nach ca. 30 Minuten Spielzeit.
+- Der Spieler beginnt mit der Hauptcharakterin Esmeralda.
+- Zusätzliche spielbare Charaktere können nur zufällig in den Grabern der Helden freigeschaltet werden.
+- Die Gräber der Helden sind eigene Level, ähnlich wie Dungeons mit klaren Zielen und besonderen Gefahren.
+- Nebencharaktere können im Verlauf von Ritual-Questreihen Extraleben erhalten.
+- Stirbt ein bereits freigeschalteter Nebencharakter, wird zuerst ein Extraleben verbraucht.
+- Sind keine Extraleben mehr vorhanden, kehrt der Nebencharakter in ein Grab der Helden zurück und muss erneut befreit werden.
 
-Die Spielwelt soll prozedural aus der TileMap erzeugt werden.
+3. Spielwelt und Weltstruktur
+3.1 Zentrale Zone
+- Im Zentrum der Welt entstehen die „klassischen“ Biome:
+  - Wald
+  - Wiese
+  - Berge
+  - Sumpf
+  - Wasser / Flüsse
+- Diese Zone ist die Grundlage der Anfangswelt und soll am natürlichsten und abwechslungsreichsten wirken.
 
--Farbpalette angelehnt an Zelda: Breath of the Wild.
--Grafikstil: Pixelart.
--Über Zeit schwerere Gegner und mehr davon spawnen.
+3.2 Äußere Zone
+- Ab etwa 1500 Tiles Entfernung vom Zentrum können weitere Biome auftauchen:
+  - Eiswüste
+  - Eisgebirge
+  - Vulkan
+  - Wüste
+  - Wasser (Seen, Meere)
+  - Gefrorenes Wasser (überfrorene Flüsse, Seen, Meere)
+- Diese Zone soll kälter, extremer und weniger friedlich wirken.
 
--Gegner droppen Erfarhung und Gold:
-Gold = Kann bei random auftauchenden Händlern für Gegenstände ausgegeben werden.
-->Es gibt Ausrüstungssets. Wenn vollständig, verändert sich der Charakter und erhält ein Set an neuen, stärkeren Fähigkeiten. 
-(Die ausgestaltung aller Fähigkeiten und Fähigkeitsbäume wird erst noch gemacht)
+3.3 Spezialbiome in Seen und Meeren
+- In großen Wasserflächen können Inseln erzeugt werden.
+- Auf diesen Inseln können zusätzliche Sonderbiome spawnen:
+  - Drachenfriedhof
+  - Grab der Helden
+- Diese Orte sollen selten, markant und narrativ aufgeladen sein.
 
--Spieler wählt am Anfang einer Runde Runde Element und damit Character aus und klickt dann auf einen Button "Starten", um auf der Weltkarte zu spawnen.
-Im Spielverlauf kann er, durch aufsammeln von Erfahrungspunkten (Blaue Kugeln) einen Erfahrungsbalken am unteren Bildschirmrand füllen und aufleveln, wenn der Balken voll ist.
-Beim Level-up bekommt er 3 zufällige Fähigkeiten aus dem Fähigkeitenbaum des ausgewählten Charakters zu Auswahl gestellt. 
-(Angezeigt als Karten mit Icon der Fähigkeit oben und Informationen zur Fähigkeit unten)
+4. Generierungslogik der Biome
+4.1 Allgemeine Regeln
+- Die Welt wird prozedural über Tile-Maps erzeugt.
+- Biome sollen nicht nur zufällig verteilt sein, sondern einen logischen Verlauf haben.
+- Die Generierung soll bewusst mit Übergängen arbeiten, damit die Welt organisch wirkt.
 
-[Erweiterung für Später:
-Ab einem bestimmten Level kann der Spieler den Fähigkeitsbaum anderen Charakters zusätzlich auswählen
--> Er erhält damit Zugang zu diesem Elementen-Skillbaum und es ergeben sich aus der Kombination der Fähigkeitsbäume Synergiefähigkeiten.
-]
+4.2 Mindestregeln für Basisbiome
+- Ein Biom muss mindestens 400 zusammenhängende Tiles besitzen, um als eigenständiges Gebiet sichtbar zu werden.
+- Wald und Wüste dürfen nicht direkt aneinander angrenzen.
+- Wenn Wasser und Wiese zusammentreffen, kann sich im Umfeld von 3 Tiles Sumpf bilden.
+- Sumpf darf sich mit Sumpf verbinden, solange das Gebiet maximal 800 Tiles groß bleibt.
 
--Endboss spawnt nach 30 Minuten Spielzeit, wenn er besiegt wird, droppt er einzelene Teile der Ausrüstungssets.
+4.3 Generierungsprinzip
+- Die Welt wird in Zonen organisiert:
+  - Kernzone: grün, feucht, bewaldet, abwechslungsreich
+  - Übergangszone: stärker verändert, mehr Extreme
+  - Außenzone: kalt, trocken, vulkanisch, wasserreich
+- Abstände vom Zentrum werden als „Klimazone“ verwendet.
+- Zusätzlich wird Noise verwendet, um organische, weiche Konturen zu erzeugen.
 
-Charaktere(Sprites der Charaktere sollen die Maße 84 by 84 Pixels haben):
-Main Charakter: Princessin Esmeralda
-Elemente als Thema:
--Feuer -> Magier
-->Aussehen: Woman with light Skincolor, black neck long hair. She should wear a leather tunic in color #70A09D and light brown leather pants. 
-She holds a red ball of light with both hands in front of herself. 
+5. Biome und ihre Nachbarschaft
+5.1 Gut kompatible Nachbarschaften
+- Wald ↔ Wiese
+- Wald ↔ Berge
+- Wiese ↔ Sumpf
+- Wiese ↔ Wasser
+- Sumpf ↔ Wasser
+- Berge ↔ Wald
+- Berge ↔ Wasser
+- Eiswüste ↔ Eisgebirge
+- Eiswüste ↔ gefrorenes Wasser
+- Eisgebirge ↔ gefrorenes Wasser
+- Vulkan ↔ Wüste
+- Vulkan ↔ Wasser
+- Wüste ↔ Wasser
+- Wasser ↔ Meer/See
 
-Weitere noch zu erstellende Charaktere basieren auf folgenden "Elementen":
--Erde -> Tank/Magier/Supporter
-->Aussehen: Big Man with light brown Skincolor and bald Head. 
-The upper Torso and shoulders look like stone. He has brown long pants on. 
-The Background is white. Pixel Art with a Canvas of 84 by 84 Pixels. Full body is visible. 
-He is positioned walking to the left side.
--Wasser -> Healer/Magier
--Wind -> Ranger/Assassin/Duellant/Magier/MartialArt/Support
--Tod -> Nekro/Magier
+5.2 Schwierigere oder untypische Nachbarschaften
+- Wald ↔ Wüste: nicht direkt, eher über Übergangsfläche
+- Wüste ↔ Eiswüste: nicht direkt, braucht Übergangszone
+- Vulkan ↔ Eisgebirge: nicht direkt, braucht Übergangszone
+- Sumpf ↔ Vulkan: eher unpassend, sollte durch Asche oder Fels ersetzt werden
+- Wald ↔ Vulkan: ebenfalls eher problematisch, sollte durch Zonen wie vernarbte Hänge oder Lavafelder getrennt werden
 
+6. Übergangsgebiete und deren Gestaltung
+6.1 Grundprinzip der Übergänge
+- Übergänge sollen nicht nur „random“ sein, sondern in der Weltlogik begründet werden.
+- Sie sollten als Pufferzonen funktionieren, die die Extreme miteinander verbinden.
 
-Charaktere sollen folgende Attribute in verschiedener, festgeschriebener Höhe erhalten, wenn die Runde startet:
-Intelligenz
--Magieschaden
-Stärke
--Angriffschaden
-(-Crit Schaden)
-Beweglichkeit
--Bewegungsgeschwindigkeit
--Crit Chance
-(-Crit Schaden)
-Konstitution
--Max Life
--Life Regen
--Widerstände
-[Willenskraft](Bei Aktivfähigkeiten)
+6.2 Beispiel: Vulkan ↔ Eisgebirge
+- Ein direktes Nebeneinander von Vulkan und Eisgebirge wirkt unrealistisch und zu hart.
+- Stattdessen sollte hier ein Übergangsgebiet entstehen, das beide Welten verbindet:
+  - Asche-Schneeflanke
+  - gefrorene Lavafelder
+  - schneebedeckte Vulkanhänge
+  - eisüberzogene Felsen mit schwarzen Schlackenflächen
+  - heiße Quellen unter Eis oder Schnee
+- Dieses Übergangsgebiet kann als eigene Zwischenzone oder als Mischbiom aus mehreren Tiles-Typen erzeugt werden.
+- Es sollte schmal und stark markant sein, damit es wie ein „Kampfzone“ zwischen Feuer und Frost wirkt.
+- Die Atmosphäre dieses Übergangs wäre: kalt, gefährlich, rau, mit glühenden Resten alter Vulkanausbrüche.
 
+6.3 Weitere sinnvolle Übergangsbiome
+- Wald ↔ Wüste: Halbwüste oder Dornsteppe
+- Wiese ↔ Berge: Hochweide oder felsige Graslandschaft
+- Wiese ↔ Sumpf: feuchte Nasswiese oder Schilfzone
+- Wasser ↔ Eiswüste: Küstenzone mit Frost und vereisten Ufern
+- Vulkan ↔ Wüste: Ascheebene oder schwarze Lavawüste
+- Eisgebirge ↔ gefrorenes Wasser: Gletscherufer oder vereiste Küsten
 
---------------Storyark---------------
-Rahmenstory:
-"Universum stirbt (FRAGE ZU KLÄREN: WARUM). Fortschrifliche Alienrasse baut Obelisken als eine Art Arche, 
-Sie Testen Verschiedene Geschöpfe, um zu entscheiden. wenn sie Retten sollen.
+7. Weltentwicklung und Atmosphäre
+- Im Zentrum entsteht eine lebendige, grüne und vielfältige Natur.
+- Je weiter man nach außen kommt, desto rauer und gefährlicher wird die Welt.
+- Die Biome sollen ein Gefühl von „Erkundung in Stufen“ vermitteln:
+  1. Bekannt und bewohnbar
+  2. Wild und gefährlich
+  3. Extrem und unzugänglich
+- Spezialinseln sollen wie geheime Orte wirken, die nicht direkt zur Hauptlandschaft gehören.
 
-Obelisk fällt auf die Erde, Hauptcharacter fast ihn an und wird gegen seinen Widerstand hineingezogen.
-Obelisk ist wie ein Portal: Hauptcharacter wird in einer neuen Welt herausgelassen und nach und nach von Gegnern angegriffen.
-Beim Tod landet er wieder im Obelisk und wird WIEDER in einer neuen Welt herausgelassen. Im Obelisk s gibt es eine Bases.
-Spieler hat 10 Versuche bestimmte Aufgaben zu schaffen. Die sollen so schwer sein, dass man sie nur schwer schaffen kann und einige Versuche braucht.
-Am Ende verbraucht der Spieler entweder alle Versuche oder die Aufgaben erfolgreich erfüllt bekommt er (im zweiten Fall zu unrecht) die Meldung er hätte es nicht geschafft.
-Ein mysteriöser Fremder interveniert und hilft die Verknüpfung mit dem Obelisken aufrecht zu erhalten um den Spieler zu retten.
-Allerdings ist der Zugang zum Obelisken nun weg, und der Spieler muss Schlüsselgegenstände finde um wieder Zugriff zu bekommen.
+8. Charaktere und Systeme
+8.1 Hauptcharakter
+- Prinzessin Esmeralda
+- Thema: Feuer / Magie
+- Attribute: Intelligenz, Stärke, Beweglichkeit, Konstitution, Willenskraft
 
+8.2 Weitere Charaktere
+- Erde: Tank / Magier / Supporter
+- Wasser: Heiler / Magier
+- Wind: Ranger / Assassine / Duelist / Magier / Martial Artist / Support
+- Tod: Nekromant / Magier
 
-Prinzessin ist erster Charakter und findet andere Charactere.
-Charactere gefangen in Locations, die als ganzes Spawnen können.
-Spieler muss rätzel lösen und gegner besiegen, um sie zu befreien.
+8.3 Attributsystem
+- Intelligenz -> Magieschaden
+- Stärke -> Angriffsschaden
+- Beweglichkeit -> Angriffsgeschwindigkeit / Crit Chance
+- Konstitution -> Max Life / Life Regen / Widerstände
+- Willenskraft -> Aktivfähigkeiten
+- Ausdauer -> Bewegungsgeschwindigkeit
 
-Schlüsselgegenstände:
-Hauptcharacter findet Schlüsselgegenstände, die die Story und das Spiel ansich erweitern. 
-Z.B. Gegenstand um den Obelisken zu öffnen, darin gibts einen einfachen Basisbau (NOCH ZU DEFINIEREN), wo der/die Charactere geupgradet werden können.
--> Schmiede, Verzauberung, Alchemie...
+9. Story- und Narrative Struktur
+- Das Universum stirbt, ein Obelisk wird zur Arche und bringt den Helden in eine neue Welt.
+- Der Held wird wiederholt in neue Welten geworfen und muss Aufgaben erfüllen.
+- Im Obelisken gibt es eine Basis, die später erweitert werden kann.
+- Andere Charaktere sind gefangen und müssen befreit werden.
+- Andere Charaktere werden in den Gräbern der Helden gefunden und freigeschaltet.
+- Die Gräber der Helden sind eigenständige Dungeongroße Levels, die besondere Prüfungen und Rätsel enthalten.
+- Es gibt eine Questreihe für ein Ritual, die der Spieler spielen kann, um 2-3 Extraleben zu erhalten.
+- Extraleben sind eine Ressource, die Nebencharaktere vor dem Tod bewahren kann.
+- Fällt ein Nebencharakter ohne verfügbare Extraleben, geht er zurück in ein Grab der Helden und muss dort erneut befreit werden.
+- Der Obelisk wird zum zentralen Story-Motor des Spiels.
 
-Hauptcharacter findet andere Charactere, die sich Ihm anschließen und spielbar werden und in der Basis Funktionen eröffnen. (Schmied, Zauberin, Hexe, usw)
-Die anderen Charactere sind ebenfalls an den Obelisken gebunden worden.
--> Eigene Skillsets, Waffen, usw.
+10. Offene TODOs
+- Hauptcharakter-Attributsheet ausarbeiten
+- Tile-Set für Wald und Berge erstellen
+- Weitere begehbare Tiles für Biome schaffen
+- Übergangsbiome als eigene Tile-Kategorien definieren
+- Spezialinseln mit Story-Events verbinden
 
-    Wenn Spieler mit einem der Charactere (nicht Prinzessin) spielt und KO geht, gibt es eine Chance, 
-    dass überleben und vom Bösen gefangen werden oder sterben und vom Obelisken zurückgeholt werden. (Chance Ereigniss)
-    -> Dann müssen sie wieder befreit werden, bevor sie wieder gespielt werden können.
-    [Boolean Feld auf playerChar: 'imprisoned']
+11. Erweiterungspotenzial
+- Mehr Biome und Übergangsbiome: z. B. Schneegrenze, Moraststeppe, Lavafelder, kristalline Wüste
+- Wetter- und Klimasysteme: Regen, Schnee, Sandstürme, Vulkanausbrüche
+- Dynamische Wasserläufe: Flüsse wachsen, Seen ändern sich, Küstenlinien verschieben sich
+- Biomspezifische Gegner und Loot: z. B. Frostmonster im Eis, Feuerwesen im Vulkan
+- Strukturelle Sonderorte: Ruinen, Dungeons, Tempel, verlassene Siedlungen
+- Mehrstory- und Quest-Content: verlorene Charaktere, alte Artefakte, regionale Geschichten
+- Erweiterte Basis- und Crafting-Systeme: Schmiede, Alchemie, Verzauberung, Bau von Strukturen
 
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////
-
-Nächster TODO:
--Für hauptcharakter Attribut Sheet entwerfen
--TileMap schneiden und weitere Tiles für die Biome Wald und Berge erzeugen (begehbare Tiles)
-
-_____________DLC Ideen_____________
--Spieler kann einen Builder Charakter befreien, mit dem er eine Basis bauen kann.
--Aktive Fähigkeiten auf den Maustasten
+12. Kurzfazit
+- Die Welt soll sich von einem lebendigen, gemischten Zentrum über klare Übergänge hin zu extremen Außenbiomen entwickeln.
+- Die Übergangsgebiete sind nicht nur dekorativ, sondern sollten die Welt glaubwürdig und spielerisch spannend machen.
+- Besonders wichtig sind die Übergänge zwischen Vulkan und Eisgebirge, weil sie ein starkes, visuell markantes und narrativ hohes Gebiet erzeugen können.

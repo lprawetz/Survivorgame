@@ -1,0 +1,124 @@
+Charakterkonzepte für Survivor-Game
+==================================
+
+1. Prinzessin Esmeralda
+- Element: Feuer
+- Rolle: Hauptcharakter / Magierin / Protagonistin
+- Bio: Esmeralda ist die letzte Erbin eines alten königlichen Hauses, das einst den Obelisken bewachte. Sie wurde nicht als Heldin geboren, sondern als Kind, das in die Rolle eines Symbols gedrängt wurde. Ihr Feuer ist kein bloßes Element, sondern eine Erinnerung an ein verbranntes Königreich.
+- Charakteristika:
+  - mutig, stolz, aber innerlich verletzt
+  - wirkt ruhig, ist aber voller unkontrollierter Wut
+  - trägt Verantwortung für andere, auch wenn sie selbst zerbrechen könnte
+- Verhalten im Spiel:
+  - kämpft mit gezielten magischen Angriffen
+  - bevorzugt schnelle, elegante, aber gefährliche Bewegungen
+  - hat eine starke Verbindung zur Obelisk-Story
+- Biome / Umgebung:
+  - passt besonders gut zu Wiese, Wald, Vulkan, alte Ruinen und Flusslandschaften
+  - fühlt sich in warmen, lebendigen Gebieten zuhause, aber bleibt in extremen Regionen besonders stark
+- Narrative Idee:
+  - Sie ist nicht nur Opfer der Welt, sondern auch diejenige, die die Welt wieder entzünden kann.
+  - Ihr Feuer ist die Erinnerung an ein Reich, das unterging – und zugleich der Anfang von etwas Neuem.
+
+2. Rusk – Erde
+- Element: Erde
+- Rolle: Tank / Magier / Supporter
+- Name: Rusk
+- Wesenart: Ein uralter Steinwächter, ein Berggeist aus Basalt und lebender Erde. Er wirkt wie ein wandelnder Golem, der von alten Ritualen und dem Willen der Berge am Leben erhalten wird.
+- Herkunftsort: Kharad, die Felsenstadt von Kharad. Eine terrassenförmige Stadt aus schwarzem Basalt, gebaut an einem vulkanischen Hang, voller Hallen unter der Erde und alter Erdrituale.
+- Bio: Rusk ist ein uralter Wächter aus den Tiefen der Erde, ein Geschöpf, das aus Stein, Schlamm und alter Magie geformt wurde. Er erinnert an einen lebenden Berg mit einem Herz aus Asche.
+- Charakteristika:
+  - träge, geduldig, enorm stabil
+  - spricht wenig, aber wenn er spricht, ist es bedeutungsvoll
+  - hat einen trockenen, humorlosen Sinn für Ironie
+- Verhalten im Spiel:
+  - sehr robust und tanky
+  - kann Gruppen kontrollieren oder Gegner festhalten
+  - passt zu defensiven und unterstützenden Builds
+- Biome / Umgebung:
+  - passt zu Bergen, Wüste, Vulkan, Felslandschaften, Sumpf und alten unterirdischen Ruinen
+  - fühlt sich in schweren, massiven Landschaften besonders wohl
+- Narrative Idee:
+  - Er ist der letzte, der noch weiß, wie die Erde einmal eine Seele hatte.
+  - Seine Existenz ist eine Verbindung zwischen dem alten und dem neuen Weltbild.
+
+3. Thalira – Wasser
+- Element: Wasser
+- Rolle: Heiler / Magier
+- Name: Thalira
+- Wesenart: Eine Wasserwächterin, eine geisterhafte Nymphe oder Flusspriesterin aus Spiegelseen, die zwischen Mensch, Geist und lebendem Wasser steht.
+- Herkunftsort: Die Stadt der Spiegelseen, ein Ort aus Holz, Schilf und gebranntem Ton, umgeben von stillen Wasserwegen und alten Heiligtümern.
+- Bio: Thalira ist eine Gestalt aus Tümpeln, Flüssen und vergessenen Quellen. Kein Mensch, kein Geist, sondern eine Art lebendige Erinnerung an alles, was im Wasser verschwindet.
+- Charakteristika:
+  - sanft, empathisch, aber unerbittlich, wenn jemand ihre Ruhe stört
+  - wirkt manchmal distanziert, weil sie Dinge schon im Fluss des Vergessens gesehen hat
+  - trägt oft eine melancholische, beinahe prophetische Aura
+- Verhalten im Spiel:
+  - unterstützt das Team mit Heilung und Kontrolle
+  - wirkt besonders stark in längeren Kämpfen
+  - passt zu defensivem, überlebensorientiertem Spielstil
+- Biome / Umgebung:
+  - passt zu Wasserflächen, Flüssen, Sümpfen, feuchten Wäldern und Inseln
+  - fühlt sich in Orten zuhause, die zwischen Leben und Verfall schwanken
+- Narrative Idee:
+  - Sie erinnert sich an alle, die im Wasser gestorben sind – und hält dennoch ihre Hand über die Überlebenden.
+  - Ihr Element ist nicht nur heilend, sondern auch ein Symbol für Vergänglichkeit.
+
+4. Vehyr – Wind
+- Element: Wind
+- Rolle: Ranger / Assassine / Duelist / Magier / Martial Artist / Supporter
+- Name: Vehyr
+- Wesenart: Ein Windläufer, ein geisterhafter Wanderer aus Luft, Scherenschnitt und Bewegung, halb Mensch, halb Elementar.
+- Herkunftsort: Die Stadt der offenen Winde, eine freie Siedlung auf einer hohen Hochebene, geprägt von Flaggen, Turmwegen und nomadischer Kultur.
+- Bio: Vehyr ist eine wandernde Gestalt aus Bewegung, Scherenschnitt und Schicksal. Er ist weder ganz Mensch noch ganz Monster, eher ein Ausdruck des unruhigen Geistes der Welt.
+- Charakteristika:
+  - schnell, unberechenbar, neugierig
+  - liebt Freiheit, kann aber auch sehr kalt und brutal sein
+  - hat eine fast kindliche Freude an Veränderung und Gefahr
+- Verhalten im Spiel:
+  - extrem agil, ideal für schnelle Kämpfe und schnelle Positionierung
+  - kann sehr gut mit Mobilität, Ausweichmechaniken und präzisen Treffern arbeiten
+- Biome / Umgebung:
+  - passt zu Bergen, offenen Ebenen, hohen Landschaften, Wüsten, Inseln und schroffen Küsten
+  - fühlt sich in Orten zuhause, an denen die Luft klar und schnell ist
+- Narrative Idee:
+  - Er ist derjenige, der immer weiterzieht, wenn Dinge zu still werden.
+  - Seine Freiheit ist seine größte Stärke und seine größte Schwäche.
+
+5. Morvane – Tod
+- Element: Tod
+- Rolle: Totensprecher / Magier
+- Name: Morvane
+- Wesenart: Ein Schattenwächter oder Totensprecher, ein Wesen zwischen Erinnerung, Schatten und Übergang, das den Toten eine letzte Stimme gibt.
+- Herkunftsort: Die Stadt der Asche, eine dunkle Stadt an den Rändern eines verfallenen Vulkans und einer großen Grablandschaft.
+- Bio: Morvane ist keine einfache Figur, sondern eine Präsenz, die zwischen Leben, Erinnerung und Verfall schwebt. Er ist nicht böse im klassischen Sinn, sondern nur die letzte Wahrheit, die alles irgendwann einholt.
+- Charakteristika:
+  - düster, ruhig, überlegt, aber mit einem verborgenem, bitterem Humor
+  - wirkt kalt, ist aber oft der einzige, der die Wahrheit sieht
+  - hat eine tiefe Verbindung zu Verlust, Hoffnungslosigkeit und Wiederkehr
+- Verhalten im Spiel:
+  - arbeitet mit Schwächung, Kontrolle, Verstärkung von Schatten und Toteneffekten
+  - passt zu langsamen, überlegenen, sehr starken Spielstilen
+- Biome / Umgebung:
+  - passt zu Grabstätten, Dünen, Ruinen, Vulkanen, Nachtlandschaften und Gebieten mit wenig Leben
+  - fühlt sich in Orten zuhause, an denen Sterben und Erinnerung eng beieinanderliegen
+- Narrative Idee:
+  - Er ist nicht der Feind des Lebens, sondern jener, der es versteht.
+  - Seine Macht ist eine Art letzter Respekt vor allem, was vergeht.
+
+6. Biome und Charaktere – sinnvolle Verflechtung
+- Esmeralda: Feuer, Wärme, alte Königslande, Vulkan, Ruinen, Wiesen und Flüsse
+- Erde: Felsen, Berge, Wüste, Vulkan, uralte Tiefen
+- Wasser: Sümpfe, Seen, Flüsse, Inseln, feuchte Wälder
+- Wind: offene Hochebenen, Küsten, Inseln, Wüsten, Gebirge
+- Tod: Grablandschaften, Ruinen, düstere Wälder, Vulkan, verlassene Orte
+
+7. Charakterische Gesamtvision
+- Jeder Charakter soll nicht nur ein Element repräsentieren, sondern auch eine eigene moralische und atmosphärische Identität haben.
+- Die Biome dienen nicht nur als Kulisse, sondern als Spiegel der Charaktere selbst.
+- Die Welt soll so aufgebaut sein, dass man die Charaktere bereits durch die Landschaften spüren kann.
+
+8. Spieltechnische Nutzung dieser Konzepte
+- Jeder Charakter kann ein eigenes Set an Gegnern, Begegnungen und Umgebungsstimmungen bekommen.
+- Biome können bestimmte Charaktere bevorzugen oder ihnen besondere Bonusse geben.
+- Die Story kann so aufgebaut werden, dass jeder Charakter an einem anderen Ort der Welt verhaftet ist oder dort seinen Ursprung findet.

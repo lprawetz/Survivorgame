@@ -1,0 +1,124 @@
+Lore-Script: Nebencharaktere und Herkunftsorte
+============================================
+
+Ziel
+----
+Die Nebencharaktere sollen nicht nur als spielbare Figuren, sondern als Teil einer größeren Welt wirken. Ihre Namen, Herkunftsorte und Kulturen sollen aus der Umgebung, den Biomen und den gesellschaftlichen Strukturen ihrer Regionen abgeleitet werden.
+
+1. Nebencharaktere und ihre Namen
+---------------------------------
+
+1.1 Erde - Der Steinwächter
+
+1.2 Wasser - Die Flusswächterin
+
+1.3 Wind - Der Wanderer der offenen Weiten
+
+1.4 Tod - Die Stimme zwischen Leben und Verfall
+
+2. Herkunftsorte mit Namen und Beschreibung
+-------------------------------------------
+
+2.1 Rusk – Die Felsenstadt von Kharad
+- Beschreibung:
+  - Eine alte Stadt aus schwarzem Basalt und grauem Stein, tief in den Bergen gebaut.
+  - Die Gebäude sind terrassenförmig auf einen Vulkanhang geschichtet.
+  - Sie ist von Mauern umgeben, die wie gewachsene Felsen wirken.
+- Was macht den Ort aus:
+  - starke Verbindung zur Erde und zu alten Ritualen
+  - große Hallen unter der Oberfläche, in denen die Bewohner ihre Erinnerungen sichern
+  - die Stadt wird von Feuern aus heißem Gestein beleuchtet
+- Kultur:
+  - eine kultur der Geduld, Pflicht und ständiger Prüfung
+  - die Menschen tragen Masken aus Stein und Leder
+  - sie verehren die Idee von Stabilität und dem Überleben über Jahrhunderte hinweg
+- Namensstil:
+  - harte Konsonanten, kurze Silben, bergige und rau klingende Namen
+
+2.2 Thalira – Die Stadt der Spiegelseen
+- Beschreibung:
+  - Eine ruhige Stadt aus Holz, Schilf und gebranntem Ton, gebaut an einem großen See mit klaren, stillen Wasserflächen.
+  - Die Häuser sind auf Pfählen errichtet und vom Wasser umgeben.
+  - Überall gibt es Tempel, Brücken und spiegelnde Wasserwege.
+- Was macht den Ort aus:
+  - eine Mischung aus Frieden, Geheimnis und Trauer
+  - die Stadt gilt als Ort der Heilung, aber auch der Rückkehr von Verlorenen
+  - in der Nacht wird das Wasser zu einem Spiegel des Himmels
+- Kultur:
+  - eine religiöse Kultur des Flusses und der Erinnerung
+  - Musik und Gesänge haben eine große Bedeutung
+  - die Menschen tragen Kleider in Blau, Grau und Silber
+- Namensstil:
+  - weich klingende, fließende Namen, oft mit langen Vokalen und sanften Endungen
+
+2.3 Vehyr – Die Stadt der offenen Winde
+- Beschreibung:
+  - Eine freie Siedlung auf einer hohen Hochebene, mit windgepeitschten Türmen und beweglichen Pavillons.
+  - Die Häuser sind leicht gebaut, damit sie bei Stürmen nicht zerbrechen.
+  - Die Bewohner nutzen Drachen, Flaggen und Windmühlen als Zeichen ihrer Freiheit.
+- Was macht den Ort aus:
+  - starke Verbindung zu Bewegung, Weite, Reise und Veränderung
+  - kein Ort, an dem man lange bleibt, sondern ein Ort, an dem man weiterzieht
+  - die Kultur lebt vom Reisen und vom Austausch zwischen Regionen
+- Kultur:
+  - nomadisch oder halbnomadisch geprägt
+  - Ehrenkodex und freie Entscheidung sind zentral
+  - sie pflegen Lieder, Wappenschilde und die Kunst des schnellen Denkens
+- Namensstil:
+  - kurze, klare Namen mit heller Klangfarbe und offenem Vokal
+
+2.4 Morvane – Die Stadt der Asche
+- Beschreibung:
+  - Eine alte, düstere Stadt an den Rändern eines verfallenen Vulkans.
+  - Graue Steintempel, monumentale Mausoleen und schmale Straßen aus schwarzem Gestein prägen das Bild.
+  - Die Stadt ist von Rauch, Schwefelgeruch und stillen Friedhöfen umgeben.
+- Was macht den Ort aus:
+  - ein Ort der Erinnerung, des Verlusts und der letzten Antworten
+  - viele Bewohner arbeiten mit Ritualen, Totenfeiern und schützenden Zeichen
+  - die Stadt wirkt dunkel, aber nicht böse – eher wie ein Ort zwischen Leben und Tod
+- Kultur:
+  - Kultur der Erinnerung, Trauer und Pflicht gegenüber den Toten
+  - Stadt hat sich der Pflege der Toten verschrieben. Umliegende Städte nehmen ihre Dienste in Anspruch.
+  - es gibt strenge Regeln für Begräbnis, Namen und Familiengeschichten
+  - die Menschen tragen dunkle Stoffe und tragen Zeichen aus Knochen oder Metall
+- Namensstil:
+  - dunkle, schwere Namen mit tiefem Klang und scharfen Konsonanten
+
+3. Namenssysteme aus Kultur und Umgebung
+----------------------------------------
+
+3.1 Bergkultur
+- Merkmale:
+  - harte Namen, kurze Silben, starke Konsonanten
+  - oft Bezug zu Stein, Feuer und Geduld
+- Beispiele:
+  - Borvann, Korrath, Tharok, Rusk
+
+3.2 Wasserkultur
+- Merkmale:
+  - fließende, weiche Namen mit Vokalen und sanften Endungen
+  - oft Bezug zu Fluss, See, Sternen, Spiegeln oder Heilung
+- Beispiele:
+  - Thalira, Nyris, Selva, Osea
+
+3.3 Windkultur
+- Merkmale:
+  - offene, helle, leichte Namen
+  - oft Bezug zu Freiheit, Reise, Weite, Licht und Bewegung
+- Beispiele:
+  - Caelan, Veyr, Aeron, Ilyr
+
+3.4 Todkultur
+- Merkmale:
+  - dunkle, alte, schwere Namen
+  - oft Bezug zu Schatten, Asche, Tod, Erinnerung oder Ritualen
+- Beispiele:
+  - Morvane, Varkh, Nyxar, Drenhal
+
+4. Händlercharaktere
+--------------------
+
+4.1 Händler stammen aus einer der genannten Kulturen. 
+- Sie werden zufällig generiert und bekommen entsprechende Namen und ein individuelles Verkaufsinventar zugeordnet.
+- Die verschiedenen Händlerkulturen bieten jeweils Teile ein Ausrüstungsset an. Aber immer zufällig, welche Teile angeboten werden.
+    - Es kann auch Händler geben, die keine Setgegenstände anbieten/dabei haben.
