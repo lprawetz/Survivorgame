@@ -1,0 +1,6 @@
+C:\Users\lpraw\Coding Projekte\Survivorgame\.godot\mono\temp\obj\Debug\Survivorgame.csproj.AssemblyReference.cache
+C:\Users\lpraw\Coding Projekte\Survivorgame\.godot\mono\temp\obj\Debug\Survivorgame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lpraw\Coding Projekte\Survivorgame\.godot\mono\temp\obj\Debug\Survivorgame.AssemblyInfoInputs.cache
+C:\Users\lpraw\Coding Projekte\Survivorgame\.godot\mono\temp\obj\Debug\Survivorgame.AssemblyInfo.cs
+C:\Users\lpraw\Coding Projekte\Survivorgame\.godot\mono\temp\obj\Debug\Survivorgame.csproj.CoreCompileInputs.cache
+C:\Users\lpraw\Coding Projekte\Survivorgame\.godot\mono\temp\obj\Debug\Survivorgame.sourcelink.json

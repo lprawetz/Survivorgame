@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Gefrorenes Wasser / Eis-See -->
+  <rect width="64" height="64" fill="#AACCE0"/>
+  <!-- Eisflächen-Grundton -->
+  <rect width="64" height="64" fill="#C8E4F0" opacity="0.6"/>
+  <!-- Eis-Risse -->
+  <line x1="0"  y1="20" x2="30" y2="32" stroke="#7AAABB" stroke-width="1.5"/>
+  <line x1="30" y1="32" x2="64" y2="18" stroke="#7AAABB" stroke-width="1.5"/>
+  <line x1="10" y1="0"  x2="28" y2="32" stroke="#7AAABB" stroke-width="1"/>
+  <line x1="28" y1="32" x2="20" y2="64" stroke="#7AAABB" stroke-width="1"/>
+  <line x1="64" y1="40" x2="34" y2="32" stroke="#7AAABB" stroke-width="1.5"/>
+  <line x1="34" y1="32" x2="50" y2="64" stroke="#7AAABB" stroke-width="1"/>
+  <!-- Eisplatten-Glanz (helle Polygone) -->
+  <polygon points="0,0   28,32 10,0"  fill="#DDEEFF" opacity="0.5"/>
+  <polygon points="64,0  30,32 64,18" fill="#DDEEFF" opacity="0.5"/>
+  <polygon points="0,64  28,32 20,64" fill="#DDEEFF" opacity="0.4"/>
+  <polygon points="64,64 34,32 50,64" fill="#DDEEFF" opacity="0.4"/>
+  <!-- Tiefes Wasser unter dem Eis -->
+  <ellipse cx="32" cy="32" rx="6" ry="4" fill="#2266AA" opacity="0.3"/>
+  <!-- Luftblase unterm Eis -->
+  <circle cx="20" cy="44" r="3" fill="#AADDEE" opacity="0.7" stroke="#88BBCC" stroke-width="1"/>
+  <circle cx="48" cy="20" r="2" fill="#AADDEE" opacity="0.7" stroke="#88BBCC" stroke-width="1"/>
+</svg>

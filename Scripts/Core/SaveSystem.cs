@@ -16,7 +16,30 @@ namespace SurvivorGame.Core
         /// <summary>Fortschritt der Ritual-Questreihe (0–3 Schritte).</summary>
         public int RitualQuestProgress { get; private set; } = 0;
 
+        /// <summary>Fester Weltseed dieses Spielstands. 0 = noch nicht generiert.</summary>
+        public int WorldSeed { get; private set; } = 0;
+
         public override void _Ready() => LoadGame();
+
+        // Liefert den Weltseed; erzeugt ihn beim ersten Aufruf einmalig.
+        public int GetOrCreateWorldSeed()
+        {
+            if (WorldSeed == 0)
+            {
+                var rng = new RandomNumberGenerator();
+                rng.Randomize();
+                WorldSeed = (int)rng.Randi() | 1; // niemals 0
+                SaveGame();
+            }
+            return WorldSeed;
+        }
+
+        // Setzt einen expliziten Weltseed (z. B. vom Spieler eingegeben).
+        public void SetWorldSeed(int seed)
+        {
+            WorldSeed = seed == 0 ? 1 : seed; // 0 ist reserviert für "nicht gesetzt"
+            SaveGame();
+        }
 
         // ─── ExtraLeben-Logik ─────────────────────────────────────────────
 
@@ -66,6 +89,7 @@ namespace SurvivorGame.Core
                 ["unlockedCharacters"] = SerializeBoolDict(UnlockedCharacters),
                 ["extraLives"]         = extraLivesRaw,
                 ["ritualProgress"]     = RitualQuestProgress,
+                ["worldSeed"]          = WorldSeed,
             };
 
             using var file = FileAccess.Open(SAVE_PATH, FileAccess.ModeFlags.Write);
@@ -94,6 +118,9 @@ namespace SurvivorGame.Core
 
             RitualQuestProgress = root.ContainsKey("ritualProgress")
                 ? root["ritualProgress"].AsInt32() : 0;
+
+            WorldSeed = root.ContainsKey("worldSeed")
+                ? root["worldSeed"].AsInt32() : 0;
         }
 
         // ─── Hilfsmethoden ────────────────────────────────────────────────
@@ -110,64 +137,6 @@ namespace SurvivorGame.Core
             var dict = new Dictionary<string, bool>();
             foreach (var kv in src) dict[kv.Key.AsString()] = kv.Value.AsBool();
             return dict;
-        }
-    }
-}
-        
-        public Dictionary<string, bool> UnlockedEquipmentSets { get; private set; } = new();
-        public Dictionary<string, bool> UnlockedCharacters { get; private set; } = new();
-        
-        public override void _Ready()
-        {
-            LoadGame();
-        }
-        
-        public void SaveGame()
-        {
-            var saveData = new Dictionary<string, object>
-            {
-                { "unlockedSets", UnlockedEquipmentSets },
-                { "unlockedCharacters", UnlockedCharacters }
-            };
-            
-            using var saveFile = FileAccess.Open(SAVE_PATH, FileAccess.ModeFlags.Write);
-            var jsonString = Json.Stringify(saveData);
-            saveFile.StoreLine(jsonString);
-        }
-        
-        public void LoadGame()
-        {
-            if (!FileAccess.FileExists(SAVE_PATH))
-            {
-                // Initialize with default values
-                UnlockedEquipmentSets = new Dictionary<string, bool>();
-                UnlockedCharacters = new Dictionary<string, bool>
-                {
-                    { "Esmeralda", true } // Starting character is always unlocked
-                };
-                SaveGame();
-                return;
-            }
-
-            using var saveFile = FileAccess.Open(SAVE_PATH, FileAccess.ModeFlags.Read);
-            var jsonString = saveFile.GetLine();
-            var json = Json.ParseString(jsonString).AsGodotDictionary();
-            
-            // Load equipment sets
-            var sets = json["unlockedSets"].AsGodotDictionary();
-            UnlockedEquipmentSets = new Dictionary<string, bool>();
-            foreach (var key in sets.Keys)
-            {
-                UnlockedEquipmentSets[key.AsString()] = sets[key].AsBool();
-            }
-            
-            // Load characters
-            var chars = json["unlockedCharacters"].AsGodotDictionary();
-            UnlockedCharacters = new Dictionary<string, bool>();
-            foreach (var key in chars.Keys)
-            {
-                UnlockedCharacters[key.AsString()] = chars[key].AsBool();
-            }
         }
     }
 }

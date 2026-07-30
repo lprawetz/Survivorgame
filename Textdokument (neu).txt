@@ -1,0 +1,4 @@
+ERROR: /root/godot/modules/mono/editor/GodotTools/GodotTools/CsProjOperations.cs:13 - System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.Build, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'. Das System kann die angegebene Datei nicht finden.
+  ERROR: File name: 'Microsoft.Build, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+  ERROR:    at GodotTools.ProjectEditor.ProjectGenerator.GenAndSaveGameProject(String dir, String name)
+  ERROR:    at GodotTools.CsProjOperations.GenerateGameProject(String dir, String name) in /root/godot/modules/mono/editor/GodotTools/GodotTools/CsProjOperations.cs:line 13

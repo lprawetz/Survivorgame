@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Wiese – Basisbiom -->
+  <rect width="64" height="64" fill="#5A9A3A"/>
+  <!-- Gras-Textur -->
+  <rect x="0"  y="0"  width="32" height="32" fill="#5EA040" opacity="0.5"/>
+  <rect x="32" y="32" width="32" height="32" fill="#5EA040" opacity="0.5"/>
+  <!-- Grashalme -->
+  <line x1="8"  y1="20" x2="6"  y2="14" stroke="#3D7A22" stroke-width="1.5"/>
+  <line x1="8"  y1="20" x2="10" y2="13" stroke="#3D7A22" stroke-width="1.5"/>
+  <line x1="20" y1="8"  x2="18" y2="2"  stroke="#3D7A22" stroke-width="1.5"/>
+  <line x1="20" y1="8"  x2="22" y2="2"  stroke="#3D7A22" stroke-width="1.5"/>
+  <line x1="44" y1="30" x2="42" y2="24" stroke="#3D7A22" stroke-width="1.5"/>
+  <line x1="44" y1="30" x2="46" y2="24" stroke="#3D7A22" stroke-width="1.5"/>
+  <line x1="56" y1="50" x2="54" y2="44" stroke="#3D7A22" stroke-width="1.5"/>
+  <line x1="56" y1="50" x2="58" y2="44" stroke="#3D7A22" stroke-width="1.5"/>
+  <line x1="30" y1="54" x2="28" y2="48" stroke="#3D7A22" stroke-width="1.5"/>
+  <line x1="30" y1="54" x2="32" y2="48" stroke="#3D7A22" stroke-width="1.5"/>
+  <!-- Wildblumen -->
+  <circle cx="14" cy="38" r="2.5" fill="#FFDD44"/>
+  <circle cx="14" cy="38" r="1"   fill="#FF8800"/>
+  <circle cx="50" cy="16" r="2.5" fill="#FF6688"/>
+  <circle cx="50" cy="16" r="1"   fill="#FFFFFF"/>
+  <circle cx="36" cy="52" r="2.5" fill="#FFDD44"/>
+  <circle cx="36" cy="52" r="1"   fill="#FF8800"/>
+  <circle cx="6"  cy="56" r="2"   fill="#AADDFF"/>
+</svg>

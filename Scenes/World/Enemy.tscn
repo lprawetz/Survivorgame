@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://2bna3kf4qtvu"]
+
+[ext_resource type="Script" uid="uid://cph0k8kil2oft" path="res://Scripts/Combat/EnemyBase.cs" id="1_0ilxn"]
+[ext_resource type="Texture2D" uid="uid://b5sdh0tnfhut2" path="res://Assets/Characters/Enemy/Enemy_sketch.svg" id="2_ilwlt"]
+[ext_resource type="Script" uid="uid://b3yrnoqf8goc8" path="res://Scripts/Combat/HurtBox.cs" id="3_x660n"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6x0of"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dohs4"]
+radius = 18.0
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1128946141]
+script = ExtResource("1_0ilxn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1038539869]
+shape = SubResource("CapsuleShape2D_6x0of")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=115944548]
+texture = ExtResource("2_ilwlt")
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=694899611]
+script = ExtResource("3_x660n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1142643430]
+shape = SubResource("CircleShape2D_dohs4")

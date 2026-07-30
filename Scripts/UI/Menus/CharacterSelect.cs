@@ -46,6 +46,8 @@ namespace SurvivorGame.UI.Menus
         private HBoxContainer _selectionBar;
         private Button        _startButton;
         private Button        _backButton;
+        private LineEdit      _seedEdit;
+        private Button        _randomizeSeedButton;
 
         // Auswahl je Spieler-Slot (null = noch nicht gewählt)
         private readonly PlayerSelection?[] _selections = new PlayerSelection?[PlayerInputManager.MaxPlayers];
@@ -70,9 +72,17 @@ namespace SurvivorGame.UI.Menus
             _selectionBar     = GetNode<HBoxContainer>("SelectionBar");
             _startButton      = GetNode<Button>("StartButton");
             _backButton       = GetNode<Button>("BackButton");
+            _seedEdit             = GetNode<LineEdit>("SeedBar/SeedEdit");
+            _randomizeSeedButton  = GetNode<Button>("SeedBar/RandomizeSeedButton");
 
             _startButton.Pressed += OnConfirmPressed;
             _backButton.Pressed  += OnBackPressed;
+            _randomizeSeedButton.Pressed += OnRandomizeSeedPressed;
+
+            // Vorhandenen Seed aus dem SaveSystem ins Feld schreiben
+            var save = GetNodeOrNull<SaveSystem>("/root/SaveSystem");
+            if (save != null && save.WorldSeed != 0)
+                _seedEdit.Text = save.WorldSeed.ToString();
 
             // Anzahl aktiver Spieler vom InputManager lesen
             if (PlayerInputManager.Instance != null)
@@ -181,6 +191,10 @@ namespace SurvivorGame.UI.Menus
 
         private void StartGame()
         {
+            // Seed aus dem Eingabefeld ins SaveSystem übernehmen
+            var save = GetNodeOrNull<SaveSystem>("/root/SaveSystem");
+            save?.SetWorldSeed(ParseSeed(_seedEdit.Text));
+
             // Auswahlen an GameState übergeben
             var gs = GetNode<SurvivorGame.Core.GameState>("/root/GameState");
             if (gs != null)
@@ -193,6 +207,26 @@ namespace SurvivorGame.UI.Menus
             }
 
             GetTree().ChangeSceneToFile("res://Scenes/World/GameWorld.tscn");
+        }
+
+        // ─── Seed ──────────────────────────────────────────────────────
+
+        private void OnRandomizeSeedPressed()
+        {
+            var rng = new RandomNumberGenerator();
+            rng.Randomize();
+            _seedEdit.Text = ((int)rng.Randi() | 1).ToString();
+        }
+
+        // Wandelt die Texteingabe in einen Seed: Zahl direkt, sonst stabiler String-Hash.
+        private static int ParseSeed(string text)
+        {
+            if (string.IsNullOrWhiteSpace(text)) return 0; // 0 = zufällig generieren
+            if (int.TryParse(text, out int numeric)) return numeric == 0 ? 1 : numeric;
+
+            int hash = 17;
+            foreach (char c in text) hash = hash * 31 + c;
+            return hash == 0 ? 1 : hash;
         }
 
         // ─── UI-Updates ───────────────────────────────────────────────────
@@ -269,142 +303,6 @@ namespace SurvivorGame.UI.Menus
             foreach (var kvp in CharacterDatabase.All)
                 if (kvp.Value.IsStartCharacter) return kvp.Key;
             return "Esmeralda";
-        }
-    }
-}
-
-    /// Rechts wird ein Infopanel mit Name, Rolle, Element und Attributen angezeigt.
-    ///
-    /// SZENEN-STRUKTUR (CharacterSelect.tscn):
-    ///   Control
-    ///     GridContainer       (Name: "CharacterGrid")
-    ///     Panel               (Name: "InfoPanel")
-    ///       VBoxContainer
-    ///         Label           (Name: "CharacterName")
-    ///         Label           (Name: "CharacterRole")
-    ///         Label           (Name: "CharacterElement")
-    ///         Label           (Name: "CharacterDescription")
-    ///         GridContainer   (Name: "StatsGrid")
-    ///     Button              (Name: "StartButton")
-    ///     Button              (Name: "BackButton")
-    /// </summary>
-    public partial class CharacterSelect : Control
-    {
-        private const string SilhouetteTexture = "res://Assets/UI/character_silhouette.png";
-
-        private GridContainer _characterGrid;
-        private Panel         _infoPanel;
-        private Label         _nameLabel;
-        private Label         _roleLabel;
-        private Label         _elementLabel;
-        private Label         _descriptionLabel;
-        private GridContainer _statsGrid;
-        private Button        _startButton;
-        private Button        _backButton;
-
-        private string _selectedCharacterId = "Esmeralda";
-
-        public override void _Ready()
-        {
-            _characterGrid    = GetNode<GridContainer>("CharacterGrid");
-            _infoPanel        = GetNode<Panel>("InfoPanel");
-            _nameLabel        = _infoPanel.GetNode<Label>("VBoxContainer/CharacterName");
-            _roleLabel        = _infoPanel.GetNode<Label>("VBoxContainer/CharacterRole");
-            _elementLabel     = _infoPanel.GetNode<Label>("VBoxContainer/CharacterElement");
-            _descriptionLabel = _infoPanel.GetNode<Label>("VBoxContainer/CharacterDescription");
-            _statsGrid        = _infoPanel.GetNode<GridContainer>("VBoxContainer/StatsGrid");
-            _startButton      = GetNode<Button>("StartButton");
-            _backButton       = GetNode<Button>("BackButton");
-
-            _startButton.Pressed += OnStartPressed;
-            _backButton.Pressed  += OnBackPressed;
-
-            BuildCharacterGrid();
-            UpdateInfoPanel("Esmeralda");
-        }
-
-        private void BuildCharacterGrid()
-        {
-            var saveSystem = GetNode<SaveSystem>("/root/SaveSystem");
-
-            foreach (var kvp in CharacterDatabase.All)
-            {
-                string id   = kvp.Key;
-                var    data = kvp.Value;
-
-                bool isUnlocked = data.IsStartCharacter ||
-                                  (saveSystem.UnlockedCharacters.TryGetValue(id, out bool val) && val);
-
-                var button = new TextureButton();
-                string texturePath = isUnlocked ? data.PortraitPath : SilhouetteTexture;
-
-                // Portrait laden; bei fehlendem Asset stumm scheitern
-                if (ResourceLoader.Exists(texturePath))
-                    button.TextureNormal = GD.Load<Texture2D>(texturePath);
-
-                if (!isUnlocked)
-                    button.Modulate = new Color(0.4f, 0.4f, 0.4f);
-
-                // Capture für Lambda
-                string capturedId = id;
-                button.Pressed += () => OnCharacterSelected(capturedId, isUnlocked);
-                _characterGrid.AddChild(button);
-            }
-        }
-
-        private void OnCharacterSelected(string id, bool isUnlocked)
-        {
-            UpdateInfoPanel(id);
-            _selectedCharacterId = id;
-            _startButton.Disabled = !isUnlocked;
-        }
-
-        private void UpdateInfoPanel(string id)
-        {
-            if (!CharacterDatabase.All.TryGetValue(id, out var data)) return;
-
-            _nameLabel.Text        = data.DisplayName;
-            _roleLabel.Text        = $"Rolle: {data.Role}";
-            _elementLabel.Text     = $"Element: {data.Element}";
-            _descriptionLabel.Text = data.Description;
-
-            BuildStatsGrid(data.BaseStats);
-        }
-
-        private void BuildStatsGrid(CharacterStats stats)
-        {
-            foreach (Node child in _statsGrid.GetChildren())
-                child.QueueFree();
-
-            AddStatRow("Intelligenz",      stats.Intelligence);
-            AddStatRow("Stärke",           stats.Strength);
-            AddStatRow("Beweglichkeit",    stats.Agility);
-            AddStatRow("Konstitution",     stats.Constitution);
-            AddStatRow("Willenskraft",     stats.Willpower);
-            AddStatRow("Ausdauer",         stats.Endurance);
-        }
-
-        private void AddStatRow(string statName, int value)
-        {
-            _statsGrid.AddChild(new Label { Text = statName });
-            _statsGrid.AddChild(new Label { Text = value.ToString() });
-        }
-
-        private void OnStartPressed()
-        {
-            // Gewählten Charakter im autoload speichern, damit die Spielwelt ihn laden kann
-            if (Engine.HasSingleton("GameState"))
-            {
-                var gameState = Engine.GetSingleton("GameState");
-                gameState.Set("SelectedCharacterId", _selectedCharacterId);
-            }
-
-            GetTree().ChangeSceneToFile("res://Scenes/World/GameWorld.tscn");
-        }
-
-        private void OnBackPressed()
-        {
-            GetTree().ChangeSceneToFile("res://Scenes/UI/MainMenu.tscn");
         }
     }
 }

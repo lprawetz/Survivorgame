@@ -22,6 +22,7 @@ namespace SurvivorGame.Combat
         protected float  CurrentHp;
         protected Node2D Target;
         private   HurtBox _hurtBox;
+        private   float   _contactCooldown;
 
         public override void _Ready()
         {
@@ -35,15 +36,43 @@ namespace SurvivorGame.Combat
 
         public override void _PhysicsProcess(double delta)
         {
-            if (Target == null)
-            {
-                Target = GetTree().GetFirstNodeInGroup("player") as Node2D;
-                if (Target == null) return;
-            }
+            Target = FindNearestPlayer();
+            if (Target == null) return;
 
             Vector2 direction = (Target.GlobalPosition - GlobalPosition).Normalized();
             Velocity = direction * MovementSpeed;
             MoveAndSlide();
+
+            ApplyContactDamage(delta);
+        }
+
+        // Zielt auf den nächsten Spieler (Coop-fähig)
+        private Node2D FindNearestPlayer()
+        {
+            Node2D nearest = null;
+            float  minDist = float.MaxValue;
+            foreach (Node node in GetTree().GetNodesInGroup("player"))
+            {
+                if (node is not Node2D p || !IsInstanceValid(p)) continue;
+                float dist = GlobalPosition.DistanceSquaredTo(p.GlobalPosition);
+                if (dist < minDist) { minDist = dist; nearest = p; }
+            }
+            return nearest;
+        }
+
+        private const float ContactRange = 26f;
+
+        private void ApplyContactDamage(double delta)
+        {
+            _contactCooldown -= (float)delta;
+            if (_contactCooldown > 0f) return;
+
+            if (GlobalPosition.DistanceTo(Target.GlobalPosition) <= ContactRange
+                && Target is Player player)
+            {
+                player.TakeDamage(ContactDamage);
+                _contactCooldown = 1.0f; // 1 Treffer pro Sekunde
+            }
         }
 
         private void OnHurt(float damage)
@@ -68,6 +97,7 @@ namespace SurvivorGame.Combat
             MaxHp         *= scale;
             CurrentHp      = MaxHp;
             MovementSpeed *= 1f + (difficultyLevel - 1) * 0.05f;
+            ContactDamage *= 1f + (difficultyLevel - 1) * 0.08f;
             ExperienceReward = (int)(ExperienceReward * (1f + (difficultyLevel - 1) * 0.1f));
         }
     }

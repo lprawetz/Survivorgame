@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Vehyr – Windläufer / Assassine -->
+  <!-- Flatternder Mantel – asymmetrisch (Bewegung) -->
+  <polygon points="14,28 50,28 55,62 20,58 10,50" fill="#333344"/>
+  <polygon points="32,28 50,28 55,62 36,56" fill="#22223A"/>
+  <!-- Windschweif am Mantel -->
+  <polygon points="10,50 6,58 14,56 12,62 20,58" fill="#444455" opacity="0.7"/>
+  <!-- Flicken / Wappenschilder -->
+  <rect x="20" y="34" width="8" height="6" rx="1" fill="#556677" opacity="0.8"/>
+  <rect x="36" y="38" width="6" height="5" rx="1" fill="#445566" opacity="0.8"/>
+  <!-- Oberkörper – enganliegend -->
+  <rect x="24" y="24" width="16" height="16" rx="3" fill="#2A2A3E"/>
+  <!-- Windkristall auf der Brust -->
+  <polygon points="32,26 35,31 32,36 29,31" fill="#CCEEFF" opacity="0.8"/>
+  <polygon points="32,28 34,31 32,34 30,31" fill="#FFFFFF" opacity="0.6"/>
+  <!-- Kopf -->
+  <circle cx="32" cy="17" r="9" fill="#C8B89A"/>
+  <!-- Sturmzerzauste Haare -->
+  <ellipse cx="32" cy="10" rx="10" ry="6" fill="#CCCCCC"/>
+  <polygon points="22,10 16,4  24,12" fill="#BBBBBB"/>
+  <polygon points="42,10 48,4  40,12" fill="#BBBBBB"/>
+  <polygon points="32,9  30,2  34,2"  fill="#DDDDDD"/>
+  <!-- Halbmaske (unteres Gesicht verdeckt) -->
+  <rect x="23" y="20" width="18" height="8" rx="3" fill="#1A1A2A"/>
+  <line x1="23" y1="23" x2="41" y2="23" stroke="#333355" stroke-width="1"/>
+  <!-- Augen – scharf und hell -->
+  <ellipse cx="28" cy="17" rx="2.5" ry="2" fill="#88BBDD"/>
+  <ellipse cx="36" cy="17" rx="2.5" ry="2" fill="#88BBDD"/>
+  <ellipse cx="28" cy="17" rx="1"   ry="1" fill="#FFFFFF"/>
+  <ellipse cx="36" cy="17" rx="1"   ry="1" fill="#FFFFFF"/>
+  <!-- Windwirbel-Hände -->
+  <ellipse cx="14" cy="36" rx="5" ry="4" fill="#AACCDD" opacity="0.5"/>
+  <ellipse cx="50" cy="36" rx="5" ry="4" fill="#AACCDD" opacity="0.5"/>
+  <ellipse cx="14" cy="35" rx="2" ry="2" fill="#EEEEFF" opacity="0.8"/>
+  <ellipse cx="50" cy="35" rx="2" ry="2" fill="#EEEEFF" opacity="0.8"/>
+</svg>

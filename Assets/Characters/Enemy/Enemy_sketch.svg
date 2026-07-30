@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Basis-Gegner – Waldkreatur -->
+  <!-- Körper – geduckt und bedrohlich -->
+  <ellipse cx="32" cy="44" rx="18" ry="14" fill="#1A2E10"/>
+  <!-- Rücken / Fell -->
+  <ellipse cx="32" cy="38" rx="14" ry="12" fill="#223A15"/>
+  <!-- Stacheln am Rücken -->
+  <polygon points="22,30 19,20 25,29" fill="#0F1A08"/>
+  <polygon points="28,27 27,16 31,26" fill="#0F1A08"/>
+  <polygon points="36,27 37,16 33,26" fill="#0F1A08"/>
+  <polygon points="42,30 45,20 39,29" fill="#0F1A08"/>
+  <!-- Vorderbeine / Klauen -->
+  <ellipse cx="16" cy="50" rx="7" ry="5" fill="#1A2E10"/>
+  <ellipse cx="48" cy="50" rx="7" ry="5" fill="#1A2E10"/>
+  <!-- Klauen -->
+  <polygon points="10,52 8,58  14,54" fill="#333322"/>
+  <polygon points="13,54 11,60 17,56" fill="#333322"/>
+  <polygon points="51,52 56,58 50,54" fill="#333322"/>
+  <polygon points="51,56 53,62 47,58" fill="#333322"/>
+  <!-- Kopf – geduckt, nach vorne gesenkt -->
+  <ellipse cx="32" cy="28" rx="12" ry="10" fill="#1A2E10"/>
+  <!-- Schnauze -->
+  <ellipse cx="32" cy="32" rx="7" ry="5" fill="#223A15"/>
+  <!-- Zähne -->
+  <polygon points="26,34 28,38 30,34" fill="#EEEEDD"/>
+  <polygon points="30,34 32,39 34,34" fill="#EEEEDD"/>
+  <polygon points="34,34 36,38 38,34" fill="#EEEEDD"/>
+  <!-- Glühende Augen -->
+  <ellipse cx="26" cy="24" rx="4" ry="3" fill="#DDAA00"/>
+  <ellipse cx="38" cy="24" rx="4" ry="3" fill="#DDAA00"/>
+  <ellipse cx="26" cy="24" rx="2" ry="1.5" fill="#FFDD00"/>
+  <ellipse cx="38" cy="24" rx="2" ry="1.5" fill="#FFDD00"/>
+  <ellipse cx="26" cy="24" rx="1" ry="1"   fill="#FFFFFF" opacity="0.7"/>
+  <ellipse cx="38" cy="24" rx="1" ry="1"   fill="#FFFFFF" opacity="0.7"/>
+  <!-- Ohren / Hörner -->
+  <polygon points="22,20 18,10 26,18" fill="#0F1A08"/>
+  <polygon points="42,20 46,10 38,18" fill="#0F1A08"/>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Eisgebirge – Gletscher-Fels von oben -->
+  <rect width="64" height="64" fill="#8AAABB"/>
+  <!-- Eisige Felsplatten -->
+  <polygon points="0,0   32,18 0,36"  fill="#9ABCCC"/>
+  <polygon points="64,0  32,18 64,36" fill="#7A9AAA"/>
+  <polygon points="0,36  32,46 0,64"  fill="#9ABCCC"/>
+  <polygon points="64,36 32,46 64,64" fill="#7A9AAA"/>
+  <!-- Zentrumsgipfel (Gletscherkuppe) -->
+  <polygon points="32,18 52,32 32,46 12,32" fill="#AACCDD"/>
+  <polygon points="32,20 48,32 32,44 16,32" fill="#C8E4EE" opacity="0.6"/>
+  <!-- Gletscherspalten (tiefes Blau) -->
+  <line x1="24" y1="26" x2="18" y2="38" stroke="#2266AA" stroke-width="2"/>
+  <line x1="40" y1="26" x2="46" y2="38" stroke="#2266AA" stroke-width="2"/>
+  <line x1="28" y1="18" x2="32" y2="32" stroke="#2266AA" stroke-width="1.5"/>
+  <!-- Eisspitzen -->
+  <polygon points="32,6  28,20 36,20" fill="#DDEEFF"/>
+  <polygon points="32,6  30,18 34,18" fill="#FFFFFF" opacity="0.7"/>
+  <!-- Schneebedeckte Felsblöcke -->
+  <ellipse cx="12" cy="12" rx="8" ry="5" fill="#7A9AAA"/>
+  <ellipse cx="12" cy="10" rx="7" ry="3" fill="#DDEEFF" opacity="0.8"/>
+  <ellipse cx="52" cy="52" rx="7" ry="5" fill="#7A9AAA"/>
+  <ellipse cx="52" cy="50" rx="6" ry="3" fill="#DDEEFF" opacity="0.8"/>
+  <!-- Gletscher-Glanz -->
+  <ellipse cx="32" cy="30" rx="8" ry="4" fill="#FFFFFF" opacity="0.3"/>
+</svg>

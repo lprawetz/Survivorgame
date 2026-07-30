@@ -36,6 +36,15 @@ namespace SurvivorGame
         [Export] public int TileSourceId  { get; set; } = 0;
         [Export] public int ViewDistance  { get; set; } = 2;  // Chunks um den Spieler
 
+        // Chunks jenseits dieser Distanz werden entladen (muss > ViewDistance sein).
+        // Da die Generierung deterministisch ist, sehen entladene Gebiete beim
+        // erneuten Besuch exakt gleich aus.
+        [Export] public int UnloadDistance { get; set; } = 4;
+
+        // Fester Weltseed: 0 = zufällig pro Start. Ein fester Wert erzeugt reproduzierbar
+        // dieselbe Welt über alle Sessions hinweg.
+        [Export] public int WorldSeed { get; set; } = 0;
+
         // Atlas-Koordinaten je Biom – im Editor nach Bedarf anpassen
         private static readonly Dictionary<BiomeType, Vector2I> BiomeAtlasCoords = new()
         {
@@ -64,12 +73,18 @@ namespace SurvivorGame
 
         public override void _Ready()
         {
-            var rng = new RandomNumberGenerator();
-            rng.Randomize();
+            int seed = WorldSeed;
+            if (seed == 0)
+            {
+                // Persistenten Seed aus dem SaveSystem beziehen (fest pro Spielstand)
+                var save = GetNodeOrNull<Core.SaveSystem>("/root/SaveSystem");
+                seed = save != null ? save.GetOrCreateWorldSeed() : (int)new RandomNumberGenerator().Randi();
+            }
 
-            _altitudeNoise.Seed    = (int)rng.Randi();
-            _moistureNoise.Seed    = (int)rng.Randi();
-            _temperatureNoise.Seed = (int)rng.Randi();
+            // Abgeleitete Seeds aus dem Basisseed – deterministisch und reproduzierbar
+            _altitudeNoise.Seed    = seed;
+            _moistureNoise.Seed    = seed + 1000;
+            _temperatureNoise.Seed = seed + 2000;
 
             // Frequenzen bestimmen die „Korngröße" der Biome
             _altitudeNoise.Frequency    = 0.004f;
@@ -87,7 +102,10 @@ namespace SurvivorGame
                 _player = GetTree().GetFirstNodeInGroup("player") as Node2D;
 
             if (_player != null)
+            {
                 GenerateChunksAround(_player.GlobalPosition);
+                UnloadDistantChunks(_player.GlobalPosition);
+            }
         }
 
         private void GenerateChunksAround(Vector2 worldPos)
@@ -106,6 +124,38 @@ namespace SurvivorGame
                     }
                 }
             }
+        }
+
+        // Entlädt Chunks außerhalb der UnloadDistance. Beim Wiederbesuch werden sie
+        // durch die deterministische Generierung identisch wiederhergestellt.
+        private void UnloadDistantChunks(Vector2 worldPos)
+        {
+            Vector2I centerChunk = WorldToChunk(worldPos);
+            var toUnload = new List<Vector2I>();
+
+            foreach (Vector2I chunk in _generatedChunks)
+            {
+                int dx = Mathf.Abs(chunk.X - centerChunk.X);
+                int dy = Mathf.Abs(chunk.Y - centerChunk.Y);
+                if (dx > UnloadDistance || dy > UnloadDistance)
+                    toUnload.Add(chunk);
+            }
+
+            foreach (Vector2I chunk in toUnload)
+            {
+                EraseChunk(chunk);
+                _generatedChunks.Remove(chunk);
+            }
+        }
+
+        private void EraseChunk(Vector2I chunkCoord)
+        {
+            int startX = chunkCoord.X * ChunkSize;
+            int startY = chunkCoord.Y * ChunkSize;
+
+            for (int x = startX; x < startX + ChunkSize; x++)
+                for (int y = startY; y < startY + ChunkSize; y++)
+                    EraseCell(0, new Vector2I(x, y));
         }
 
         private void GenerateChunk(Vector2I chunkCoord)

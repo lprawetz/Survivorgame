@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Eiswüste – Schneefeld -->
+  <rect width="64" height="64" fill="#D8EAF4"/>
+  <!-- Schneeverwehungen -->
+  <ellipse cx="16" cy="16" rx="18" ry="8"  fill="#E8F4FF" opacity="0.7"/>
+  <ellipse cx="50" cy="40" rx="16" ry="7"  fill="#E8F4FF" opacity="0.7"/>
+  <ellipse cx="10" cy="50" rx="12" ry="6"  fill="#E8F4FF" opacity="0.6"/>
+  <!-- Schnee-Schatten (Verwehungsrinnen) -->
+  <ellipse cx="32" cy="22" rx="20" ry="5" fill="#B8D0E4" opacity="0.5"/>
+  <ellipse cx="34" cy="50" rx="18" ry="4" fill="#B8D0E4" opacity="0.5"/>
+  <!-- Eis-Kristalle -->
+  <line x1="20" y1="38" x2="20" y2="30" stroke="#88AACC" stroke-width="1.5"/>
+  <line x1="16" y1="34" x2="24" y2="34" stroke="#88AACC" stroke-width="1.5"/>
+  <line x1="17" y1="31" x2="23" y2="37" stroke="#88AACC" stroke-width="1"/>
+  <line x1="23" y1="31" x2="17" y2="37" stroke="#88AACC" stroke-width="1"/>
+  <line x1="48" y1="16" x2="48" y2="8"  stroke="#88AACC" stroke-width="1.5"/>
+  <line x1="44" y1="12" x2="52" y2="12" stroke="#88AACC" stroke-width="1.5"/>
+  <line x1="45" y1="9"  x2="51" y2="15" stroke="#88AACC" stroke-width="1"/>
+  <line x1="51" y1="9"  x2="45" y2="15" stroke="#88AACC" stroke-width="1"/>
+  <!-- Vereiste Felsbrocken -->
+  <ellipse cx="54" cy="56" rx="7" ry="5" fill="#9AAABB"/>
+  <ellipse cx="6"  cy="8"  rx="5" ry="4" fill="#9AAABB"/>
+  <!-- Schneeglitzer -->
+  <circle cx="30" cy="14" r="1" fill="#FFFFFF"/>
+  <circle cx="44" cy="32" r="1" fill="#FFFFFF"/>
+  <circle cx="12" cy="40" r="1" fill="#FFFFFF"/>
+  <circle cx="56" cy="22" r="1" fill="#FFFFFF"/>
+</svg>

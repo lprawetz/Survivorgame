@@ -21,9 +21,15 @@ namespace SurvivorGame.Combat
         [Export] public float       BaseDamage       { get; set; } = 12f;
         [Export] public float       AttackRange      { get; set; } = 420f;
 
-        // Multiplikatoren – werden vom LevelUpSystem verändert
-        public float DamageMultiplier        { get; set; } = 1.0f;
-        public float AttackSpeedMultiplier   { get; set; } = 1.0f;
+        // Multiplikatoren – werden vom UpgradeApplier verändert
+        public float DamageMultiplier      { get; set; } = 1.0f;
+        public float AttackSpeedMultiplier { get; set; } = 1.0f;
+        public float CritChance            { get; set; } = 0.0f;
+        public float AreaMultiplier        { get; set; } = 1.0f;
+        public int   ExtraProjectiles      { get; set; } = 0;
+
+        private const float CritDamageFactor = 2.0f;
+        private readonly RandomNumberGenerator _rng = new();
 
         private Timer   _timer;
         private Node2D  _owner2D;
@@ -32,6 +38,7 @@ namespace SurvivorGame.Combat
         public override void _Ready()
         {
             _owner2D = GetParent<Node2D>();
+            _rng.Randomize();
 
             // Projektilfarbe aus Charakter-Element ableiten
             if (_owner2D is Player player && player.Data != null)
@@ -49,8 +56,15 @@ namespace SurvivorGame.Combat
             var target = FindNearestEnemy();
             if (target == null) return;
 
-            Vector2 dir = (target.GlobalPosition - _owner2D.GlobalPosition).Normalized();
-            SpawnProjectile(dir);
+            Vector2 baseDir = (target.GlobalPosition - _owner2D.GlobalPosition).Normalized();
+
+            // Hauptprojektil + zusätzliche Projektile leicht fächerförmig
+            int total = 1 + ExtraProjectiles;
+            for (int i = 0; i < total; i++)
+            {
+                float angleOffset = total > 1 ? Mathf.DegToRad((i - (total - 1) / 2f) * 12f) : 0f;
+                SpawnProjectile(baseDir.Rotated(angleOffset));
+            }
         }
 
         private Node2D FindNearestEnemy()
@@ -71,8 +85,12 @@ namespace SurvivorGame.Combat
         {
             var proj = ProjectileScene.Instantiate<Projectile>();
             proj.GlobalPosition = _owner2D.GlobalPosition;
-            proj.Initialize(direction, BaseDamage * DamageMultiplier, _projectileColor);
-            // Projektil direkt in der Szene spawnen (nicht als Kind des Spielers)
+
+            float damage = BaseDamage * DamageMultiplier;
+            if (_rng.Randf() < CritChance) damage *= CritDamageFactor;
+
+            proj.Initialize(direction, damage, _projectileColor);
+            proj.Scale = new Vector2(AreaMultiplier, AreaMultiplier);
             GetTree().CurrentScene.AddChild(proj);
         }
 

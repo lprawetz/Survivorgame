@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Berge – Draufsicht auf felsiges Terrain -->
+  <rect width="64" height="64" fill="#5A5A60"/>
+  <!-- Felsplatten -->
+  <polygon points="0,0   32,20 0,40"   fill="#6A6A70"/>
+  <polygon points="64,0  32,20 64,40"  fill="#4E4E55"/>
+  <polygon points="0,40  32,44 0,64"   fill="#6A6A70"/>
+  <polygon points="64,40 32,44 64,64"  fill="#4E4E55"/>
+  <!-- Zentraler Felsvorsprung -->
+  <polygon points="32,20 50,32 32,44 14,32" fill="#707078"/>
+  <polygon points="32,20 50,32 32,44 14,32" fill="#888890" opacity="0.4"/>
+  <!-- Schroffes Zentrum -->
+  <polygon points="32,22 44,32 32,42 20,32" fill="#626268"/>
+  <!-- Felsspitzen -->
+  <polygon points="32,8  26,22 38,22" fill="#8A8A92"/>
+  <polygon points="32,8  29,20 35,20" fill="#AAAAAA" opacity="0.5"/>
+  <!-- Steinige Details -->
+  <circle cx="16" cy="16" r="5" fill="#50505A"/>
+  <circle cx="50" cy="48" r="4" fill="#50505A"/>
+  <circle cx="48" cy="14" r="3" fill="#58585E"/>
+  <circle cx="14" cy="50" r="3" fill="#58585E"/>
+  <!-- Schattenspalten -->
+  <line x1="20" y1="32" x2="14" y2="32" stroke="#38383E" stroke-width="1.5"/>
+  <line x1="44" y1="32" x2="50" y2="32" stroke="#38383E" stroke-width="1.5"/>
+  <!-- Kleine Kristalle -->
+  <polygon points="54,8  52,14 56,14" fill="#AACCEE" opacity="0.7"/>
+  <polygon points="10,54 8,60  12,60" fill="#AACCEE" opacity="0.7"/>
+</svg>
