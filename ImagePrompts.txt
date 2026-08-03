@@ -83,21 +83,24 @@ Portrait:
 "pixel art portrait, 128x128, young princess with crimson-red hair and golden
 crown, wearing a torn royal gown in deep red and gold tones, fire magic glowing
 in her hands, intense amber eyes with a hint of sadness, dark ruins background
-with glowing embers, fantasy RPG, cel-shaded, atmospheric"
+with glowing embers, fantasy RPG, cel-shaded, atmospheric, rich ruby-red and
+amber-gold palette, deep brown and blue-gray shadows, orange-red flame accents"
 
 Sprite (Bewegung):
 "pixel art sprite sheet, 64x64 per frame, 4 directional walking animation
 (down, up, left, right), 4 frames each, fire princess with crimson hair,
-red-gold dress with flame effects, fantasy top-down RPG, transparent background"
+red-gold dress with flame effects, fantasy top-down RPG, transparent background,
+strong contrast between ruby-red, amber-gold, brown, and blue-gray shadows"
 
 Angriffsanimation:
 "pixel art sprite sheet, 64x64, fire mage princess casting spell, arm raised,
 bright orange-red flame burst effect, 6 frame animation, top-down view,
-transparent background"
+transparent background, vivid flame colors against deep red and gold clothing"
 
 Idle-Animation:
 "pixel art, 64x64, fire princess standing idle, subtle flame glow around hands,
-hair flowing slightly, 4 frame loop, top-down RPG sprite, transparent background"
+hair flowing slightly, 4 frame loop, top-down RPG sprite, transparent background,
+soft ember glow in amber and orange over crimson tones"
 
 
 --- Rusk (Erde-Wächter) ---
@@ -106,16 +109,19 @@ Portrait:
 "pixel art portrait, 128x128, massive stone golem warrior, ancient basalt rock
 body with glowing cracks of amber magma, worn stone mask with hollow eyes,
 slow dignified posture, dark underground cave background, deep earthy tones
-brown-gray-black, fantasy RPG, cel-shaded"
+brown-gray-black, fantasy RPG, cel-shaded, basalt gray, earthy brown, deep
+black, and warm amber-gold cracks glowing through the stone"
 
 Sprite (Bewegung):
 "pixel art sprite sheet, 64x64 per frame, 4 directional walking animation,
 giant stone golem, heavy slow movement, earthen brown and gray tones,
-small rocks floating around body, fantasy top-down RPG, transparent background"
+small rocks floating around body, fantasy top-down RPG, transparent background,
+muted stone palette with gold-lit fissures and dark shadowed edges"
 
 Angriffsanimation:
 "pixel art sprite sheet, 64x64, earth golem slamming ground, stone pillar
-rising from ground, 6 frame animation, dust and rock particles, top-down view"
+rising from ground, 6 frame animation, dust and rock particles, top-down view,
+crackling amber glow against basalt gray and brown rubble"
 
 
 --- Thalira (Wasser-Heilerin) ---
@@ -124,16 +130,19 @@ Portrait:
 "pixel art portrait, 128x128, ethereal water nymph with flowing silver-blue
 hair that blends into water, pale translucent skin with a faint blue glow,
 wearing flowing blue-gray robes, melancholic expression, surrounded by gentle
-water ripples and floating lily pads, soft teal lighting, fantasy RPG"
+water ripples and floating lily pads, soft teal lighting, fantasy RPG,
+silver-blue and seafoam green tones, pale teal highlights, and cool white-blue glows"
 
 Sprite (Bewegung):
 "pixel art sprite sheet, 64x64 per frame, 4 directional walking animation,
 water priestess in flowing blue robes, ripple effect around feet, translucent
-shimmer, soft blue-silver color palette, fantasy top-down RPG, transparent background"
+shimmer, soft blue-silver color palette, fantasy top-down RPG, transparent background,
+light blue-gray clothing with teal accents and icy white highlights"
 
 Heilanimation:
 "pixel art sprite sheet, 64x64, water mage healing spell cast, gentle blue-green
-light wave emanating from hands, water droplets floating upward, 6 frame animation"
+light wave emanating from hands, water droplets floating upward, 6 frame animation,
+soft cyan and aqua glow against cool silver-blue tones"
 
 
 --- Vehyr (Wind-Assassine) ---
@@ -142,16 +151,19 @@ Portrait:
 "pixel art portrait, 128x128, swift windrunner with wild windswept hair in
 silver-white and light gray, half-masked face, tattered cloak made of wind and
 shadow, piercing bright eyes, crouched ready-to-strike pose, high mountain
-cliff background with storm clouds, sharp contrasts, light and dark gray tones"
+cliff background with storm clouds, sharp contrasts, light and dark gray tones,
+silver-white hair, storm-blue accents, deep charcoal shadows, and pale icy highlights"
 
 Sprite (Bewegung):
 "pixel art sprite sheet, 64x64 per frame, 4 directional walking animation,
 agile assassin with flowing gray cloak, wind trail effect, fast fluid movement,
-light gray-white-dark blue color palette, fantasy top-down RPG, transparent background"
+light gray-white-dark blue color palette, fantasy top-down RPG, transparent background,
+soft silver motion lines with deep blue-gray shadows"
 
 Dash-Animation:
 "pixel art sprite sheet, 64x64, wind assassin dashing with wind burst trail,
-blur motion effect, 5 frame animation, top-down view, transparent background"
+blur motion effect, 5 frame animation, top-down view, transparent background,
+bright white-blue burst against dark slate and silver tones"
 
 
 --- Morvane (Tod-Totensprecher) ---
@@ -161,17 +173,20 @@ Portrait:
 of deep purple and black, pale gaunt face with hollow dark eyes and subtle
 purple glow, bone and metal jewelry, surrounded by floating dark shadows and
 ash particles, standing at edge of ancient graveyard at night, cold purple
-torch light, unsettling but not evil expression, fantasy RPG, cel-shaded"
+torch light, unsettling but not evil expression, fantasy RPG, cel-shaded,
+deep violet and black robes, bone-white highlights, and cold blue-violet glow"
 
 Sprite (Bewegung):
 "pixel art sprite sheet, 64x64 per frame, 4 directional walking animation,
 death mage in long dark robes, shadow tendrils trailing behind, deep purple
 and black color palette, faint skull motifs on robe, floating slightly above
-ground, fantasy top-down RPG, transparent background"
+ground, fantasy top-down RPG, transparent background, dark violet silhouettes with
+ivory bone details and ghostly blue-violet accents"
 
 Todesmagie-Animation:
 "pixel art sprite sheet, 64x64, necromancer raising hand, dark purple energy
-swirling, shadow hands reaching from below, 6 frame animation, top-down view"
+swirling, shadow hands reaching from below, 6 frame animation, top-down view,
+shadowy violet and blue-violet magic contrasted with pale bone-white highlights"
 
 ------------------------------------------------------------
 BIOM-TILESETS
