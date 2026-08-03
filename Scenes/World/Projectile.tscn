@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ohcw2n6023ja"]
+
+[ext_resource type="Script" uid="uid://cgsq10ta8wmvx" path="res://Scripts/Combat/Projectile.cs" id="1_5fuds"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dohs4"]
+radius = 6.0
+
+[node name="Projectile" type="Node2D" unique_id=108033827]
+script = ExtResource("1_5fuds")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=783722625]
+shape = SubResource("CircleShape2D_dohs4")

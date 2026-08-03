@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c55m0f74bpe8i"]
+
+[ext_resource type="Script" uid="uid://dxn2d6v0rhjyr" path="res://Scripts/Player.cs" id="1_83ydu"]
+[ext_resource type="Texture2D" uid="uid://davyyfvmgwa70" path="res://Assets/Characters/Fire/Esmaralda_sketch.svg" id="2_5iun4"]
+[ext_resource type="Script" uid="uid://cmgh7ger15ib5" path="res://Scripts/Combat/HurtBox.cs" id="3_e8jdp"]
+[ext_resource type="Script" uid="uid://bhuupnhx4crbr" path="res://Scripts/Combat/AutoAttack.cs" id="4_ghrpn"]
+[ext_resource type="PackedScene" uid="uid://ohcw2n6023ja" path="res://Scenes/World/Projectile.tscn" id="5_n0wsk"]
+[ext_resource type="Script" uid="uid://csxgr001ywjvf" path="res://Scripts/Combat/SetManager.cs" id="6_6mnsb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6x0of"]
+radius = 18.0
+
+[node name="Player" type="CharacterBody2D" unique_id=60813818]
+script = ExtResource("1_83ydu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=960953253]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1779429919]
+texture = ExtResource("2_5iun4")
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=682950364]
+script = ExtResource("3_e8jdp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=306543681]
+shape = SubResource("CircleShape2D_6x0of")
+
+[node name="AutoAttack" type="Node" parent="." unique_id=1445185314]
+script = ExtResource("4_ghrpn")
+ProjectileScene = ExtResource("5_n0wsk")
+
+[node name="SetManager" type="Node" parent="." unique_id=674055475]
+script = ExtResource("6_6mnsb")

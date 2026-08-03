@@ -4,3 +4,6 @@ C:\Users\lpraw\Coding Projekte\Survivorgame\.godot\mono\temp\obj\Debug\Survivorg
 C:\Users\lpraw\Coding Projekte\Survivorgame\.godot\mono\temp\obj\Debug\Survivorgame.AssemblyInfo.cs
 C:\Users\lpraw\Coding Projekte\Survivorgame\.godot\mono\temp\obj\Debug\Survivorgame.csproj.CoreCompileInputs.cache
 C:\Users\lpraw\Coding Projekte\Survivorgame\.godot\mono\temp\obj\Debug\Survivorgame.sourcelink.json
+C:\Users\lpraw\Coding Projekte\Survivorgame\.godot\mono\temp\obj\Debug\Survivorgame.dll
+C:\Users\lpraw\Coding Projekte\Survivorgame\.godot\mono\temp\obj\Debug\refint\Survivorgame.dll
+C:\Users\lpraw\Coding Projekte\Survivorgame\.godot\mono\temp\obj\Debug\Survivorgame.pdb

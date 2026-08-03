@@ -1,6 +1,20 @@
 Bild-KI Prompts – Survivorgame Visuals
 =======================================
 
+FARBPALLETTE (Zelda Breath of the Wild-ähnlich)
+===============================================
+
+Für eine natürliche, kontrastreiche Fantasy-Palette mit BotW-Atmosphäre:
+- Charaktere: warme Erdtöne wie tiefes Rot, Ocker, Gold, dunkles Grün und
+  blaugraue Schatten, mit hellen Ivory-Highlights und kleinen leuchtenden
+  Akzenten in Amber, Cyan oder Violett
+- Gegner: erdige Basisfarben mit elementaren Akzenten, z. B. Waldwesen in
+  Moosgrün und Anthrazit, Wüstenwesen in Sandgelb und Rostrot, Eiswesen in
+  Hellblau und Weiß, Vulkanelemente in Schwarz, Dunkelrot und Orange
+- Landschaften: üppige Grün- und Ocker-Töne, graue Stein- und Felsfarben,
+  kühle Blau- und Weiß-Töne für Schnee/Eis, warme Orange- und Rot-Töne für
+  Vulkan- und Sonnengebiete, mit starkem Licht-Schatten-Kontrast
+
 EMPFOHLENE KI-TOOLS
 ===================
 
@@ -38,19 +52,30 @@ GLOBALER STIL-SUFFIX (an jeden Prompt anhängen)
 
 Für Charaktere:
 "pixel art, top-down 2D RPG, 64x64 sprite sheet, fantasy, dark atmospheric,
-cel-shaded, high contrast, transparent background, Zelda Breath of the Wild color palette"
+cel-shaded, high contrast, transparent background, Zelda Breath of the Wild color palette,
+with warm earth reds, deep forest greens, muted golds, blue-gray shadows, and soft ivory highlights"
 
 Für Tiles/Biome:
 "pixel art tileset, top-down 2D RPG, 16x16 tiles, seamless, fantasy,
-atmospheric lighting, Zelda Breath of the Wild art direction, gouache painting style"
+atmospheric lighting, Zelda Breath of the Wild art direction, natural palette of lush greens,
+warm ochres, stone blues, gray-browns, volcanic orange-reds, snow-white ice tones, and strong light-shadow contrast"
 
 Für Portraits (Charakterauswahl):
 "pixel art portrait, 128x128, fantasy RPG character, detailed, atmospheric,
-dark fantasy, front-facing, no background or dark gradient background"
+dark fantasy, front-facing, no background or dark gradient background, vivid but grounded palette,
+warm skin tones, rich jewel colors, blue-gray shadows, and soft ivory highlights"
 
 ------------------------------------------------------------
 CHARAKTER-SPRITES
 ------------------------------------------------------------
+
+Farbhinweise für Charaktere:
+- Esmeralda: tiefes Rubinrot, glühendes Amber-Gold, dunkles Braun und
+  blaugraue Schatten mit orange-roten Flammenakzenten
+- Rusk: basaltgrau, erdiges Braun, dunkles Schwarz und warme Gold-Glut in den Rissen
+- Thalira: silberblau, seetanggrün, helles Türkis und kühle Weißlichter
+- Vehyr: silberweiß, hellgrau, sturmblau und tiefes Anthrazit
+- Morvane: tiefes Violett, schwarz, Knochen-Ivory und kalte Blauviolett-Glut
 
 --- Esmeralda (Feuer-Magierin) ---
 
@@ -152,6 +177,15 @@ swirling, shadow hands reaching from below, 6 frame animation, top-down view"
 BIOM-TILESETS
 ------------------------------------------------------------
 
+Farbhinweise für Landschaften:
+- Wiese / Kernzone: reiches Grün, warmes Gelb-Ocker, braune Erde und ein helles Blau des Himmels
+- Wald: tiefes Waldgrün, braunes Ocker, Moosfarben und orange-braune Laubtöne
+- Berge: grauer Stein, slateblau, spärlich grün und helle Felskanten
+- Sumpf: olivgrün, schlammiges Braun, dunkles Teal und nebliges Grau
+- Wüste: sandgelb, verbranntes Orange, Terrakotta und blasses Ivory
+- Vulkan: schwarzer Basalt, dunkelrot, orange Lava und aschgrau
+- Eiswüste / Eisgebirge / Gefrorenes Wasser: weiß, eisblau, helles Cyan und stahlgrau
+
 --- Wiese / Kernzone ---
 "pixel art tileset, 16x16 tiles, lush green meadow, short grass, wildflowers
 in yellow and purple, soft earthy path tiles, stone wall tiles, small pond
@@ -208,6 +242,13 @@ white-blue, top-down 2D RPG, seamless"
 ------------------------------------------------------------
 GEGNER-SPRITES
 ------------------------------------------------------------
+
+Farbhinweise für Gegner:
+- Wald-Kreatur: Moosgrün, Anthrazit, gelblich-olivene Augen und dunkle Schattierungen
+- Wüsten-Scorpion: sandgelb, rostrot, schwarzer Panzer und bernsteinfarbene Augen
+- Eis-Wraith: eisblau-weiß, helles Cyan und frostige Transparenz
+- Vulkan-Imp: schwarz, dunkelrot, glühend orange Lava-Risse und feuerrote Akzente
+- Obelisk-Wächter: tiefes Schwarz-Blau, cyanfarbene Runen und aschgraue Metalltöne
 
 --- Basis-Gegner: Wald-Kreatur ---
 "pixel art sprite sheet, 32x32 per frame, forest creature enemy, dark green
