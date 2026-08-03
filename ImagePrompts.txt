@@ -205,54 +205,64 @@ Farbhinweise für Landschaften:
 "pixel art tileset, 16x16 tiles, lush green meadow, short grass, wildflowers
 in yellow and purple, soft earthy path tiles, stone wall tiles, small pond
 edge tiles, top-down 2D RPG, Zelda Breath of the Wild color palette,
-saturated green #4A7C3F, warm sunlight, seamless"
+saturated green #4A7C3F, warm yellow-ochre grass, rich brown earth, muted blue-gray
+stone, and bright sky-blue highlights, warm sunlight, seamless"
 
 --- Wald ---
 "pixel art tileset, 16x16 tiles, dense forest floor, dark green moss,
 large tree base tiles, exposed roots, fallen leaves in orange-brown,
-mushroom patches, top-down RPG fantasy, atmospheric shadow, seamless"
+mushroom patches, top-down RPG fantasy, atmospheric shadow, deep forest green,
+moosy olive tones, brown-orange leaf colors, and dark charcoal undergrowth, seamless"
 
 --- Berge ---
 "pixel art tileset, 16x16 tiles, rocky mountain terrain, gray basalt rock,
 cracked stone paths, sparse mountain grass, cliff edge tiles, small crystals
-embedded in rock, top-down 2D RPG, cool gray-blue tones, seamless"
+embedded in rock, top-down 2D RPG, cool gray-blue tones, slate blue stone,
+ash gray rock, pale ivory cliffs, and muted green moss in crevices, seamless"
 
 --- Sumpf ---
 "pixel art tileset, 16x16 tiles, dark murky swamp, muddy brown-green water,
 dead tree stumps, lily pads, bubbling mud, reeds and cattails, foggy dark
-atmosphere, top-down RPG, desaturated green-brown palette, seamless"
+atmosphere, top-down RPG, desaturated green-brown palette, olive and swamp brown
+water, dark teal shadows, and muted gray fog, seamless"
 
 --- Wüste ---
 "pixel art tileset, 16x16 tiles, sandy desert terrain, warm sand dunes,
 cracked dry earth, sandstone rock formations, scattered dry bones,
 ancient ruin fragments, top-down 2D RPG, warm gold-orange #E8C87A palette,
+soft sand yellow, burnt orange, terracotta red, and pale ivory bone highlights,
 harsh sunlight, seamless"
 
 --- Vulkan ---
 "pixel art tileset, 16x16 tiles, volcanic terrain, black basalt rock #3D3D3D,
 glowing lava cracks #FF6820, ash-covered ground, hardened lava flows,
-steam vent tiles, top-down 2D RPG, dark and fiery atmosphere, seamless"
+steam vent tiles, top-down 2D RPG, dark and fiery atmosphere, deep black basalt,
+dark red ash, glowing orange lava, and gray smoke, seamless"
 
 --- Eiswüste ---
 "pixel art tileset, 16x16 tiles, frozen tundra, snow-covered ground,
 ice sheet tiles, frost-covered rocks, frozen dead trees, blizzard particle
-tiles, top-down 2D RPG, cold white-blue #F0F4FF palette, seamless"
+tiles, top-down 2D RPG, cold white-blue #F0F4FF palette, stark white snow,
+ice-blue surfaces, steel-gray rock, and pale cyan frost, seamless"
 
 --- Eisgebirge ---
 "pixel art tileset, 16x16 tiles, glacier mountain, deep blue-white ice walls,
 snow-dusted cliff faces, icicle formations hanging down, frozen waterfall tiles,
-top-down 2D RPG, cold blue #A8C8E8 and gray tones, seamless"
+top-down 2D RPG, cold blue #A8C8E8 and gray tones, blue-white ice, pale cyan shadows,
+and steel-gray stone under snow, seamless"
 
 --- Gefrorenes Wasser ---
 "pixel art tileset, 16x16 tiles, frozen lake and river, cracked ice surface
 with blue depth showing below, frost patterns on ice, air bubble trapped in
-ice, top-down 2D RPG, pale blue-white palette, seamless"
+ice, top-down 2D RPG, pale blue-white palette, icy white surfaces, deep blue
+underwater glow, and subtle gray cracks, seamless"
 
 --- Vulkan-Eis-Übergangszone ---
 "pixel art tileset, 16x16 tiles, surreal transition zone between volcano and
 glacier, half-frozen lava tiles, black ash covering snow, steam rising from
 hot springs under ice, scorched icy rock, dramatic contrasts of orange and
-white-blue, top-down 2D RPG, seamless"
+white-blue, top-down 2D RPG, glowing orange lava, icy white-blue snow, black ash,
+and deep blue steam, seamless"
 
 ------------------------------------------------------------
 GEGNER-SPRITES
@@ -268,28 +278,33 @@ Farbhinweise für Gegner:
 --- Basis-Gegner: Wald-Kreatur ---
 "pixel art sprite sheet, 32x32 per frame, forest creature enemy, dark green
 shadowy wolf-like beast with glowing yellow eyes, 4 directional walking animation
-4 frames each, death animation 4 frames, top-down 2D RPG, transparent background"
+4 frames each, death animation 4 frames, top-down 2D RPG, transparent background,
+deep moss green body, charcoal shadows, olive undertones, and bright yellow-green eyes"
 
 --- Basis-Gegner: Wüsten-Scorpion ---
 "pixel art sprite sheet, 32x32, giant desert scorpion, sandy brown armored
 shell, glowing red eyes, 4 directional walking animation, attack animation
-with stinger, top-down 2D RPG, transparent background"
+with stinger, top-down 2D RPG, transparent background, warm sand yellow,
+rotting orange shell, rust-red accents, and amber-red glowing eyes"
 
 --- Basis-Gegner: Eis-Wraith ---
 "pixel art sprite sheet, 32x32, ghostly ice wraith, translucent pale blue
 floating specter, sharp ice crystal claws, slow gliding movement, 4 directions,
-top-down RPG, transparent background"
+top-down RPG, transparent background, icy white body, pale cyan glow, blue-gray
+shadows, and crystalline frost highlights"
 
 --- Basis-Gegner: Vulkan-Imp ---
 "pixel art sprite sheet, 32x32, small volcanic demon, dark red-black body
 with glowing orange lava cracks on skin, horns, fast erratic movement,
-4 directional animation, top-down 2D RPG, transparent background"
+4 directional animation, top-down 2D RPG, transparent background, blackened
+charcoal body, deep red armor, orange lava veins, and glowing ember accents"
 
 --- Endboss: Obelisk-Wächter ---
 "pixel art sprite sheet, 96x96, massive ancient stone guardian boss,
 tall monolithic body of black and dark blue with glowing cyan runes #00CFDF,
 multiple arms with Sheikah-style markings, imposing, 4 directional idle
-animation, attack charge animation, top-down 2D RPG, transparent background"
+animation, attack charge animation, top-down 2D RPG, transparent background,
+deep black-blue stone, ash gray armor, glowing cyan runes, and cool silver highlights"
 
 ------------------------------------------------------------
 UI-ELEMENTE
@@ -297,32 +312,36 @@ UI-ELEMENTE
 
 --- HP-Balken ---
 "pixel art UI health bar, fantasy RPG style, deep red fill with dark border,
-heart icon on left, worn stone or dark metal frame, 200x20 pixel, flat"
+heart icon on left, worn stone or dark metal frame, 200x20 pixel, flat, rich crimson
+health color, blackened border, and muted brown-gray frame accents"
 
 --- XP-Balken ---
 "pixel art UI experience bar, glowing amber-gold fill, dark border,
-star icon on left, 200x10 pixel, flat"
+star icon on left, 200x10 pixel, flat, warm gold experience color, deep brown
+edge, and soft ivory highlights"
 
 --- Gold-Anzeige ---
 "pixel art UI coin icon, gold coin with simple symbol, 16x16, shiny,
-flat, fantasy RPG style"
+flat, fantasy RPG style, bright gold coin with warm yellow highlights and dark bronze shadows"
 
 --- Charakter-Portrait-Rahmen ---
 "pixel art portrait frame, 132x132, ornate stone-and-metal border,
 fantasy RPG style, aged dark stone with golden corner accents,
-transparent center, flat"
+transparent center, flat, deep brown-gray stone, muted gold trim, and dark charcoal shadows"
 
 --- Hauptmenü-Hintergrund ---
 "pixel art landscape background, 1920x1080, wide view of a fantasy world
 from above, glowing ancient obelisk in center, dark storm clouds with cracks
 of light, surrounding diverse biomes visible (forest left, mountains right,
 desert and ice in distance), Zelda BotW inspired atmosphere, dramatic lighting,
-cinematic wide angle, dark fantasy tone with cyan obelisk glow"
+cinematic wide angle, dark fantasy tone with cyan obelisk glow, rich green forest,
+stone-blue mountains, golden desert dunes, and icy white peaks"
 
 --- Level-Up-Auswahl-Panel ---
 "pixel art UI panel, 3 card slots side by side, dark stone-blue background,
 golden border trim, fantasy RPG skill selection screen, worn parchment texture
-inside cards, 400x200 pixel total, flat"
+inside cards, 400x200 pixel total, flat, cool slate-blue panel, muted gold trim,
+and warm parchment card tones"
 
 ------------------------------------------------------------
 SONDERORTE
@@ -331,15 +350,18 @@ SONDERORTE
 --- Grab der Helden (Eingang) ---
 "pixel art, top-down 2D tile, dungeon entrance to hero's tomb, ancient stone
 archway with glowing cyan runes, carved hero reliefs on walls, moss and ivy,
-torches with blue fire, dramatic shadow, atmospheric, 16x16 to 32x32 tiles"
+torches with blue fire, dramatic shadow, atmospheric, 16x16 to 32x32 tiles,
+weathered gray stone, deep green moss, cyan rune glow, and blue-white torch light"
 
 --- Obelisk-Basis (Innen) ---
 "pixel art interior background, 1920x1080 or tileset, interior of an ancient
 black stone obelisk used as sanctuary, walls covered in cyan glowing runes
 #00CFDF, floating platforms, old maps and relics on walls, mystical dark blue
-atmosphere, top-down 2D RPG"
+atmosphere, top-down 2D RPG, black stone walls, deep blue shadows, glowing cyan
+runes, and dim silver highlights"
 
 --- Drachenfriedhof ---
 "pixel art tileset, 16x16, dragon graveyard, massive dragon skull and bone
 tiles, scorched earth, remnant scale tiles, eerie green fog, dark gray and
-bone-white palette, top-down 2D RPG, seamless"
+bone-white palette, top-down 2D RPG, seamless, charcoal gray ruins, bone-white
+remains, sickly green fog, and ember-orange scorch marks"
